@@ -1,0 +1,15 @@
+{
+  "configurations": {
+    "toannv.com": {
+      "repository_directory": "tuf-metadata",
+      "repository_mirrors" : {
+        "mirror1": {
+          "url_prefix": "http://www.toannv.com/tuf",
+          "metadata_path": "metadata",
+          "targets_path": "targets",
+          "confined_target_dirs": [ "" ]
+        }
+      }
+    }
+  }
+}
