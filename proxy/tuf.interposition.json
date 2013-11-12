@@ -1,6 +1,6 @@
 {
   "configurations": {
-    "toannv.com": {
+    "bvestation.com": {
       "repository_directory": "tuf-metadata",
       "repository_mirrors" : {
         "mirror1": {

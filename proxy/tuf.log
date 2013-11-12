@@ -679,3 +679,71 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
     assert configuration.hostname not in self.__updaters
 AssertionError
+[2013-11-11 06:47:01,196 UTC] [tuf.interposition] [INFO][info:33@utility.py] Updater added for Configuration(netloc=toannv.com:80).
+[2013-11-11 06:47:01,197 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater for hostname=www.bvestation.com
+[2013-11-11 06:47:01,197 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater or interposition for url=http://www.bvestation.com/tuf
+[2013-11-11 06:47:05,377 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
+    configuration_handler(configuration)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
+    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
+    assert configuration.hostname not in self.__updaters
+AssertionError
+[2013-11-11 06:47:05,378 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
+    configuration_handler(configuration)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
+    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
+    assert configuration.hostname not in self.__updaters
+AssertionError
+[2013-11-12 04:40:20,573 UTC] [tuf.interposition] [INFO][info:33@utility.py] Updater added for Configuration(netloc=toannv.com:80).
+[2013-11-12 04:40:20,575 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater for hostname=www.bvestation.com
+[2013-11-12 04:40:20,576 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater or interposition for url=http://www.bvestation.com/tuf
+[2013-11-12 04:40:34,732 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
+    configuration_handler(configuration)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
+    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
+    assert configuration.hostname not in self.__updaters
+AssertionError
+[2013-11-12 04:40:34,733 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
+    configuration_handler(configuration)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
+    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
+    assert configuration.hostname not in self.__updaters
+AssertionError
+[2013-11-12 04:45:23,350 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
+    configuration_handler(configuration)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
+    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
+    assert configuration.hostname not in self.__updaters
+AssertionError
+[2013-11-12 04:45:23,351 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
+    configuration_handler(configuration)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
+    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
+    assert configuration.hostname not in self.__updaters
+AssertionError
+[2013-11-12 04:48:36,280 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater for hostname=bvestation.com
+[2013-11-12 04:48:36,281 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater or interposition for url=http://bvestation.com/update/v1/Tails/0.21/i386/stable/Tails_i386_0.21_to_0.22.iuk
+[2013-11-12 04:51:29,154 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater for hostname=bvestation.com
+[2013-11-12 04:51:29,154 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater or interposition for url=http://bvestation.com/update/v1/Tails/0.21/i386/stable/Tails_i386_0.21_to_0.22.iuk
+[2013-11-12 04:59:00,657 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater for hostname=bvestation.com
+[2013-11-12 04:59:00,657 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater or interposition for url=http://bvestation.com/update/v1/Tails/0.21/i386/stable/Tails_i386_0.21_to_0.22.iuk
+[2013-11-12 05:00:07,767 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater for hostname=bvestation.com
+[2013-11-12 05:00:07,768 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater or interposition for url=http://bvestation.com/update/v1/Tails/0.21/i386/stable/Tails_i386_0.21_to_0.22.iuk
