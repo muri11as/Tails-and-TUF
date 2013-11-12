@@ -1,9 +1,9 @@
-[2013-11-11 06:36:32,929 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
+[2013-11-12 05:17:39,440 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
     assert mirror_hostname not in self.__repository_mirror_hostnames
 AssertionError
-[2013-11-11 06:36:32,930 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+[2013-11-12 05:17:39,442 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for bvestation.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -12,7 +12,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:36:32,932 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+[2013-11-12 05:17:39,444 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -21,12 +21,12 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:36:34,019 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
+[2013-11-12 05:17:46,679 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
     assert mirror_hostname not in self.__repository_mirror_hostnames
 AssertionError
-[2013-11-11 06:36:34,020 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+[2013-11-12 05:17:46,680 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for bvestation.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -35,7 +35,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:36:34,022 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+[2013-11-12 05:17:46,681 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -44,12 +44,12 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:36:34,358 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
+[2013-11-12 05:17:48,064 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
     assert mirror_hostname not in self.__repository_mirror_hostnames
 AssertionError
-[2013-11-11 06:36:34,359 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+[2013-11-12 05:17:48,064 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for bvestation.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -58,7 +58,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:36:34,361 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+[2013-11-12 05:17:48,065 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -67,12 +67,12 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:36:34,534 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
+[2013-11-12 05:17:48,328 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
     assert mirror_hostname not in self.__repository_mirror_hostnames
 AssertionError
-[2013-11-11 06:36:34,535 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+[2013-11-12 05:17:48,329 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for bvestation.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -81,7 +81,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:36:34,537 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+[2013-11-12 05:17:48,330 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -90,12 +90,12 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:36:34,764 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
+[2013-11-12 05:17:48,520 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
     assert mirror_hostname not in self.__repository_mirror_hostnames
 AssertionError
-[2013-11-11 06:36:34,766 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+[2013-11-12 05:17:48,521 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for bvestation.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -104,7 +104,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:36:34,768 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+[2013-11-12 05:17:48,522 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -113,12 +113,12 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:36:34,891 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
+[2013-11-12 05:17:48,694 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
     assert mirror_hostname not in self.__repository_mirror_hostnames
 AssertionError
-[2013-11-11 06:36:34,893 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+[2013-11-12 05:17:48,695 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for bvestation.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -127,7 +127,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:36:34,895 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+[2013-11-12 05:17:48,695 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -136,12 +136,12 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:56,356 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
+[2013-11-12 05:17:48,919 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
     assert mirror_hostname not in self.__repository_mirror_hostnames
 AssertionError
-[2013-11-11 06:37:56,358 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+[2013-11-12 05:17:48,920 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for bvestation.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -150,7 +150,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:56,361 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+[2013-11-12 05:17:48,921 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -159,12 +159,12 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:57,164 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
+[2013-11-12 05:17:49,094 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
     assert mirror_hostname not in self.__repository_mirror_hostnames
 AssertionError
-[2013-11-11 06:37:57,165 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+[2013-11-12 05:17:49,095 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for bvestation.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -173,7 +173,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:57,168 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+[2013-11-12 05:17:49,097 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -182,12 +182,12 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:57,456 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
+[2013-11-12 05:17:49,253 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
     assert mirror_hostname not in self.__repository_mirror_hostnames
 AssertionError
-[2013-11-11 06:37:57,458 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+[2013-11-12 05:17:49,254 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for bvestation.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -196,7 +196,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:57,461 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+[2013-11-12 05:17:49,256 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -205,12 +205,12 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:57,865 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
+[2013-11-12 05:17:49,398 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
     assert mirror_hostname not in self.__repository_mirror_hostnames
 AssertionError
-[2013-11-11 06:37:57,867 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+[2013-11-12 05:17:49,400 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for bvestation.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -219,7 +219,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:57,869 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+[2013-11-12 05:17:49,401 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -228,12 +228,12 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:58,046 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
+[2013-11-12 05:17:49,532 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
     assert mirror_hostname not in self.__repository_mirror_hostnames
 AssertionError
-[2013-11-11 06:37:58,048 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+[2013-11-12 05:17:49,534 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for bvestation.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -242,7 +242,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:58,050 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+[2013-11-12 05:17:49,536 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -251,12 +251,12 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:58,200 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
+[2013-11-12 05:18:32,881 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
     assert mirror_hostname not in self.__repository_mirror_hostnames
 AssertionError
-[2013-11-11 06:37:58,202 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+[2013-11-12 05:18:32,883 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for bvestation.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -265,7 +265,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:58,206 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+[2013-11-12 05:18:32,885 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -274,12 +274,12 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:58,406 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
+[2013-11-12 05:18:33,635 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
     assert mirror_hostname not in self.__repository_mirror_hostnames
 AssertionError
-[2013-11-11 06:37:58,409 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+[2013-11-12 05:18:33,637 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for bvestation.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -288,7 +288,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:58,412 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+[2013-11-12 05:18:33,638 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -297,12 +297,12 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:58,558 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
+[2013-11-12 05:18:33,847 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
     assert mirror_hostname not in self.__repository_mirror_hostnames
 AssertionError
-[2013-11-11 06:37:58,561 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+[2013-11-12 05:18:33,849 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for bvestation.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -311,7 +311,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:37:58,563 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+[2013-11-12 05:18:33,850 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -320,12 +320,12 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:38:18,795 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
+[2013-11-12 05:18:34,035 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
     assert mirror_hostname not in self.__repository_mirror_hostnames
 AssertionError
-[2013-11-11 06:38:18,799 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
+[2013-11-12 05:18:34,037 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for bvestation.com!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -334,7 +334,7 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:38:18,802 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
+[2013-11-12 05:18:34,039 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
     configuration_handler(configuration)
@@ -343,407 +343,3 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:38:27,471 UTC] [tuf.interposition] [INFO][info:33@utility.py] Updater added for Configuration(netloc=toannv.com:80).
-[2013-11-11 06:38:41,249 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:41,252 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:46,063 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:46,066 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:46,689 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:46,693 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:46,892 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:46,896 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:47,062 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:47,066 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:47,239 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:47,244 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:47,409 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:47,414 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:47,557 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:47,561 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:47,732 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:47,737 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:47,910 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:38:47,915 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:39:58,921 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:39:58,927 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:40:02,518 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:40:02,523 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:40:40,439 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:40:40,444 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:40:51,257 UTC] [tuf.interposition] [INFO][info:33@utility.py] Updater added for Configuration(netloc=toannv.com:80).
-[2013-11-11 06:41:04,685 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:41:04,685 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:41:32,706 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
-    assert mirror_hostname not in self.__repository_mirror_hostnames
-AssertionError
-[2013-11-11 06:41:32,707 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com/tuf!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
-    raise InvalidConfiguration(error_message)
-InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:41:32,707 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
-    raise InvalidConfiguration(error_message)
-InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:41:43,507 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:41:43,507 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:41:55,970 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid repository mirror www.toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 210, in __check_configuration_on_add
-    assert mirror_hostname not in self.__repository_mirror_hostnames
-AssertionError
-[2013-11-11 06:41:55,971 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com/tuf!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
-    raise InvalidConfiguration(error_message)
-InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:41:55,971 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
-    raise InvalidConfiguration(error_message)
-InvalidConfiguration: Invalid repository mirror www.toannv.com!
-[2013-11-11 06:42:50,874 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:42:50,876 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:47:01,196 UTC] [tuf.interposition] [INFO][info:33@utility.py] Updater added for Configuration(netloc=toannv.com:80).
-[2013-11-11 06:47:01,197 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater for hostname=www.bvestation.com
-[2013-11-11 06:47:01,197 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater or interposition for url=http://www.bvestation.com/tuf
-[2013-11-11 06:47:05,377 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-11 06:47:05,378 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-12 04:40:20,573 UTC] [tuf.interposition] [INFO][info:33@utility.py] Updater added for Configuration(netloc=toannv.com:80).
-[2013-11-12 04:40:20,575 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater for hostname=www.bvestation.com
-[2013-11-12 04:40:20,576 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater or interposition for url=http://www.bvestation.com/tuf
-[2013-11-12 04:40:34,732 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-12 04:40:34,733 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-12 04:45:23,350 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration for toannv.com!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-12 04:45:23,351 UTC] [tuf.interposition] [ERROR][exception:28@utility.py] Invalid configuration in tuf.interposition.json!
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/__init__.py", line 199, in __read_configuration
-    configuration_handler(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 227, in add
-    repository_mirror_hostnames = self.__check_configuration_on_add(configuration)
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 198, in __check_configuration_on_add
-    assert configuration.hostname not in self.__updaters
-AssertionError
-[2013-11-12 04:48:36,280 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater for hostname=bvestation.com
-[2013-11-12 04:48:36,281 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater or interposition for url=http://bvestation.com/update/v1/Tails/0.21/i386/stable/Tails_i386_0.21_to_0.22.iuk
-[2013-11-12 04:51:29,154 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater for hostname=bvestation.com
-[2013-11-12 04:51:29,154 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater or interposition for url=http://bvestation.com/update/v1/Tails/0.21/i386/stable/Tails_i386_0.21_to_0.22.iuk
-[2013-11-12 04:59:00,657 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater for hostname=bvestation.com
-[2013-11-12 04:59:00,657 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater or interposition for url=http://bvestation.com/update/v1/Tails/0.21/i386/stable/Tails_i386_0.21_to_0.22.iuk
-[2013-11-12 05:00:07,767 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater for hostname=bvestation.com
-[2013-11-12 05:00:07,768 UTC] [tuf.interposition] [WARNING][warn:38@utility.py] No updater or interposition for url=http://bvestation.com/update/v1/Tails/0.21/i386/stable/Tails_i386_0.21_to_0.22.iuk
