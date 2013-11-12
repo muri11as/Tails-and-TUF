@@ -119,9 +119,12 @@ Throws an exception on detected failure.
 method get_url ($url) {
     my $ua  = LWP::UserAgent->new();
     unless ($ENV{HARNESS_ACTIVE} or $ENV{DISABLE_PROXY}) {
-        $ua->proxy([qw(http https)] => 'socks://127.0.0.1:9062');
+        #$ua->proxy([qw(http https)] => 'socks://127.0.0.1:9062');
+	#Make this request go through our Proxy, not Tor
+	$ua->proxy([qw(http https)] => 'http://128.238.102.109:8080');
     }
-    $ua->protocols_allowed([qw{http}]);
+    #allow both http and https
+    $ua->protocols_allowed([qw(http https)]);
     $ua->max_size($self->max_download_size);
 
     my $res = $ua->request(HTTP::Request->new('GET', $url));
@@ -154,7 +157,7 @@ method get_url ($url) {
 
     return $decoded_content;
 }
-=head1
+
 method verify_signature ($description, $signature) {
     my $gnupg = GnuPG::Interface->new();
     $gnupg->options->hash_init(
@@ -188,7 +191,7 @@ method verify_signature ($description, $signature) {
 
     return $CHILD_ERROR == 0;
 }
-=cut
+
 method matches_running_system ($description_str) {
     assert(defined $description_str);
     my $description = YAML::Any::Load($description_str);
@@ -205,10 +208,11 @@ method matches_running_system ($description_str) {
 
 method run () {
     my $description = $self->get_url($self->update_description_file_url);
-    ##my $signature   = $self->get_url($self->update_description_sig_url );
+    #Disable signature verifying for updates.yml since we don't have Tails key to sign this file
+    #my $signature   = $self->get_url($self->update_description_sig_url );
 
-    ##$self->verify_signature($description, $signature)
-     ##   or croak("Invalid signature");
+    #$self->verify_signature($description, $signature)
+        #or croak("Invalid signature");
     $self->matches_running_system($description)
         or croak("Does not match running system");
     print $description;

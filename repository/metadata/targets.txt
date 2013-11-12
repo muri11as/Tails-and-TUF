@@ -1,0 +1,28 @@
+{
+ "signatures": [
+  {
+   "keyid": "cda3862c43a9e091fac9cbb5c8624129e442f4cf2cb624501718f94f9d1e6f12", 
+   "method": "PyCrypto-PKCS#1 PSS", 
+   "sig": "79b210ea8f9da88a9a005332fe9e8de9a54e9410e9e5eaf1bb53c3ffe54e02e7c079bae328afff23841911d03ef3bf8dd3a64318ed6471a8e3bf4c1eb1cd234a6c7e331f0a3254aa4a7b546bc08bf1bdf8dd53129d85bfb8e93d50891680456a56ac36aff7e94bdeb62629beef78e08a6529c4d9f1c3c815648f62093f9383c6483f20ee490cd0ba7deeaa0a018e542c31cbc3f70bdde5e51e07222b15e5c7ccd512871c52fea278e917c4c6b4093b31d7be7570642396755e12a50dd827b903fd94816c1970984f2138538b27e6918b9b83e729c6f27ddc0170e2b3229035ba8a5d0715a32d1aaaf2289563485cb21ebb96b89001c01ccd8f992028d91e2317"
+  }
+ ], 
+ "signed": {
+  "_type": "Targets", 
+  "expires": "2013-12-06 11:59:59 UTC", 
+  "targets": {
+   "Tails_i386_0.21_to_0.22.iuk": {
+    "hashes": {
+     "sha256": "277db6d7371d82241603f5f87d124c6087050703caa951b22c8f37ed6cf31037"
+    }, 
+    "length": 184320
+   }, 
+   "updates.yml": {
+    "hashes": {
+     "sha256": "4111411d6002b1f1796eef98c4f43b3e7ce605f120b857e60d9576b1f470b084"
+    }, 
+    "length": 657
+   }
+  }, 
+  "version": 1
+ }
+}
