@@ -1,10 +1,10 @@
 {
   "configurations": {
-    "bvestation.com": {
+    "tails.boum.org": {
       "repository_directory": "tuf-metadata",
       "repository_mirrors" : {
         "mirror1": {
-          "url_prefix": "http://www.toannv.com/tuf/",
+          "url_prefix": "http://www.toannv.com/tuf",
           "metadata_path": "metadata",
           "targets_path": "targets",
           "confined_target_dirs": [ "" ]
