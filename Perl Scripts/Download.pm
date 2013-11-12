@@ -154,7 +154,7 @@ method get_url ($url) {
 
     return $decoded_content;
 }
-
+=head1
 method verify_signature ($description, $signature) {
     my $gnupg = GnuPG::Interface->new();
     $gnupg->options->hash_init(
@@ -188,7 +188,7 @@ method verify_signature ($description, $signature) {
 
     return $CHILD_ERROR == 0;
 }
-
+=cut
 method matches_running_system ($description_str) {
     assert(defined $description_str);
     my $description = YAML::Any::Load($description_str);
@@ -205,10 +205,10 @@ method matches_running_system ($description_str) {
 
 method run () {
     my $description = $self->get_url($self->update_description_file_url);
-    my $signature   = $self->get_url($self->update_description_sig_url );
+    ##my $signature   = $self->get_url($self->update_description_sig_url );
 
-    $self->verify_signature($description, $signature)
-        or croak("Invalid signature");
+    ##$self->verify_signature($description, $signature)
+     ##   or croak("Invalid signature");
     $self->matches_running_system($description)
         or croak("Does not match running system");
     print $description;
