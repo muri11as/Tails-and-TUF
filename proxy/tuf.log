@@ -343,3 +343,19 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tuf/interposition/updater.py", line 216, in __check_configuration_on_add
     raise InvalidConfiguration(error_message)
 InvalidConfiguration: Invalid repository mirror www.toannv.com!
+[2013-11-12 07:25:11,068 UTC] [tuf.interposition] [INFO][info:33@utility.py] Updater added for Configuration(netloc=bvestation.com:80).
+[2013-11-12 07:25:11,069 UTC] [tuf.interposition] [INFO][info:33@utility.py] Found updater for hostname=bvestation.com
+[2013-11-12 07:25:11,069 UTC] [tuf.interposition] [INFO][info:33@utility.py] Updater added for Configuration(netloc=bvestation.com:80).
+[2013-11-12 07:25:11,070 UTC] [tuf.interposition] [INFO][info:33@utility.py] Interposing for http://bvestation.com/updates.yml
+[2013-11-12 07:25:11,071 UTC] [tuf.interposition] [INFO][info:33@utility.py] Found updater for hostname=bvestation.com
+[2013-11-12 07:25:11,071 UTC] [tuf.download] [INFO][download_url_to_tempfileobj:362@download.py] Downloading: http://www.toannv.com/tuf//metadata/timestamp.txt
+[2013-11-12 07:25:11,072 UTC] [tuf.interposition] [INFO][info:33@utility.py] Interposing for http://bvestation.com/updates.yml
+[2013-11-12 07:25:11,093 UTC] [tuf.download] [INFO][download_url_to_tempfileobj:362@download.py] Downloading: http://www.toannv.com/tuf//metadata/timestamp.txt
+[2013-11-12 07:25:13,180 UTC] [tuf.download] [DEBUG][download_url_to_tempfileobj:387@download.py] Do not know how much is required to download for "http://www.toannv.com/tuf//metadata/timestamp.txt"!
+[2013-11-12 07:25:13,180 UTC] [tuf.download] [DEBUG][_download_fixed_amount_of_data:285@download.py] Downloaded 942/942 bytes.
+[2013-11-12 07:25:13,181 UTC] [tuf.client.updater] [WARNING][_update_metadata:694@updater.py] Bad signature on http://www.toannv.com/tuf//metadata/timestamp.txt.
+[2013-11-12 07:25:13,182 UTC] [tuf.client.updater] [ERROR][_update_metadata:702@updater.py] Unable to update 'timestamp.txt'.
+[2013-11-12 07:25:13,183 UTC] [tuf.download] [DEBUG][download_url_to_tempfileobj:387@download.py] Do not know how much is required to download for "http://www.toannv.com/tuf//metadata/timestamp.txt"!
+[2013-11-12 07:25:13,184 UTC] [tuf.download] [DEBUG][_download_fixed_amount_of_data:285@download.py] Downloaded 942/942 bytes.
+[2013-11-12 07:25:13,184 UTC] [tuf.client.updater] [WARNING][_update_metadata:694@updater.py] Bad signature on http://www.toannv.com/tuf//metadata/timestamp.txt.
+[2013-11-12 07:25:13,185 UTC] [tuf.client.updater] [ERROR][_update_metadata:702@updater.py] Unable to update 'timestamp.txt'.
