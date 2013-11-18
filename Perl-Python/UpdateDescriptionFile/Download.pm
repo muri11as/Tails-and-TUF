@@ -30,7 +30,7 @@ use English qw{-no_match_vars};
 use File::Temp qw{tempfile};
 use GnuPG::Interface;
 use HTTP::Request;
-use HTTP::Response;
+use HTTP::Response; #We need this to construct a new object from file returned by TUF
 use IO::Handle;
 
 use IO::Socket::SSL;
@@ -126,10 +126,9 @@ method get_url ($url) {
     $ua->max_size($self->max_download_size);
 
     #my $res = $ua->request(HTTP::Request->new('GET', $url));
-    $url = "http://www.toannv.com/tuf/targets/updates.yml";
-    my $command = "python /usr/share/perl5/Tails/IUK/UpdateDescriptionFile/download.py" . $url;
-    my $content = `$command`;
-    my $res = HTTP::Response->parse($content);
+    my $command = "python /usr/share/perl5/Tails/IUK/UpdateDescriptionFile/download.py " . $url;
+    my $content = `$command`; #force downloading go through TUF
+    my $res = HTTP::Response->parse($content); #Construct a new HTTP::Response object from returned file by TUF
 
     defined $res or croak(sprintf(
         "Could not download '%s', undefined result", $url
