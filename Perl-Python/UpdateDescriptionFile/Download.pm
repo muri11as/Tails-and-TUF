@@ -126,8 +126,10 @@ method get_url ($url) {
     $ua->max_size($self->max_download_size);
 
     #my $res = $ua->request(HTTP::Request->new('GET', $url));
-    $content = `"python /usr/share/perl5/Tails/IUK/UpdateDescriptionFile/download.py" . $url`;
-    $my res = HTTP::Response->parse($content);
+    $url = "http://www.toannv.com/tuf/targets/updates.yml";
+    my $command = "python /usr/share/perl5/Tails/IUK/UpdateDescriptionFile/download.py" . $url;
+    my $content = `$command`;
+    my $res = HTTP::Response->parse($content);
 
     defined $res or croak(sprintf(
         "Could not download '%s', undefined result", $url
