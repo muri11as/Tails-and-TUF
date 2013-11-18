@@ -74,7 +74,7 @@ method run () {
     unless ($ENV{HARNESS_ACTIVE} or $ENV{DISABLE_PROXY}) {
         #$ua->proxy([qw(http https)] => 'socks://127.0.0.1:9062');
 	#Make this request go through our Proxy, not Tor
-	$ua->proxy([qw(http https)] => 'http://127.0.0.1:8080');
+	$ua->proxy([qw(http https)] => 'http://0.0.0.0:8080');
     }
     $ua->protocols_allowed([qw(http https)]);
     my $req = HTTP::Request->new('GET', $self->uri);
