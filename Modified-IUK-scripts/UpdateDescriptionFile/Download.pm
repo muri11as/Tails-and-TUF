@@ -121,7 +121,7 @@ method get_url ($url) {
     unless ($ENV{HARNESS_ACTIVE} or $ENV{DISABLE_PROXY}) {
         #$ua->proxy([qw(http https)] => 'socks://127.0.0.1:9062');
 	#Make this request go through our Proxy, not Tor
-	$ua->proxy([qw(http https)] => 'http://128.238.102.109:8080');
+	$ua->proxy([qw(http https)] => 'http://127.0.0.1:8080');
     }
     #allow both http and https
     $ua->protocols_allowed([qw(http https)]);
