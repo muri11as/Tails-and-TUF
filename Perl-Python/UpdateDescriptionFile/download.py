@@ -8,12 +8,13 @@ file will be piped into download.pm
 import tuf.interposition
 from tuf.interposition import urllib2_tuf as urllib2
 import sys
-url = sys.argv[1]
+url = sys.argv[1] #url to download from
 tuf.interposition.configure("/usr/share/perl5/Tails/IUK/tuf.interposition.json")
 try:
     response = urllib2.urlopen(url)
     print "HTTP/1.1",response.getcode(),"OK" #success
     print response.info() #then print the header
+    print '\n'  #separate from header to content
     print response.read() #and the content of updates.yml
 #Otherwise, return error code
 except urllib2.HTTPError, e:
