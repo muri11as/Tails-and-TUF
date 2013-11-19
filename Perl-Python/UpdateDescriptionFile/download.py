@@ -9,7 +9,7 @@ import tuf.interposition
 from tuf.interposition import urllib2_tuf as urllib2
 import sys
 url = sys.argv[1] #url to download from
-tuf.interposition.configure("/usr/share/perl5/Tails/IUK/tuf.interposition.json")
+tufconfig = tuf.interposition.configure("/usr/share/perl5/Tails/IUK/tuf.interposition.json")
 try:
     response = urllib2.urlopen(url)
     print "HTTP/1.1",response.getcode(),"OK" #success
@@ -21,3 +21,5 @@ except urllib2.HTTPError, e:
 	print e.code
 except urllib2.URLError, e:
 	print e.args
+finally:
+	tuf.interposition.deconfig(tufconfig)
