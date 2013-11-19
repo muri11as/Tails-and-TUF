@@ -4,8 +4,13 @@
 #Date: Nov 17, 2013
 #Description: Automated script to install TUF and modified script in Tails
 ############################################################################
-#Copy modified Perl scripts to their destionations
-sudo cp ../Modified-IUK-scripts/RunningSystem.pm /usr/share/perl5/Tails/IUK/RunningSystem.pm
-sudo cp ../Modified-IUK-scripts/UpdateDescriptionFile/Download.pm /usr/share/perl5/Tails/IUK/UpdateDescriptionFile/Download.pm 
-sudo cp ../Modified-IUK-scripts/TargetFile/Download.pm /usr/share/perl5/Tails/IUK/TargetFile/Download.pm
-
+#Extract TUF Binary and install it
+tar -xf tuf-binary-installation.tar.gz --directory ./tufbinary
+cd tufbinary
+sudo sh setup.sh
+cd ..
+#Extract modified scripts and copy to destination
+echo Copying scripts...
+tar -xf Perl-Python.tar.gz
+cd Perl-Python
+sudo sh setup.sh
