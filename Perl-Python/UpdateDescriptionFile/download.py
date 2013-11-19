@@ -14,7 +14,7 @@ try:
     response = urllib2.urlopen(url)
     print "HTTP/1.1",response.getcode(),"OK" #success
     print response.info() #then print the header
-    print '\n'  #separate from header to content
+    print '\n'  #separate between header and content
     print response.read() #and the content of updates.yml
 #Otherwise, return error code
 except urllib2.HTTPError, e:
