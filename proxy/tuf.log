@@ -1,0 +1,4 @@
+[2013-11-18 00:03:40,857 UTC] [tuf.interposition] [DEBUG][debug:28@utility.py] Created temporary directory at /var/folders/h4/nb3kvpgn7txf2x506z5xz0bm0000gn/T/tmpRiZzLy
+[2013-11-18 00:03:40,889 UTC] [tuf.util] [DEBUG][load_json_file:575@util.py] open(tuf-metadata/metadata/current/root.txt)
+[2013-11-18 00:03:40,924 UTC] [tuf.util] [DEBUG][load_json_file:575@util.py] open(tuf-metadata/metadata/previous/root.txt)
+[2013-11-18 00:03:40,941 UTC] [tuf.interposition] [INFO][info:38@utility.py] Updater added for Configuration(netloc=tails.boum.org:80).
