@@ -5,6 +5,7 @@
 #Description: Automated script to install TUF and modified script in Tails
 ############################################################################
 #Extract TUF Binary and install it
+mkdir tufbinary
 tar -xf tuf-binary-installation.tar.gz --directory ./tufbinary
 cd tufbinary
 sudo sh setup.sh
