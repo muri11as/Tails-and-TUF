@@ -1,7 +1,7 @@
 {
   "configurations": {
     "tails.boum.org": {
-      "repository_directory": "tuf-metadata",
+      "repository_directory": "/usr/share/perl5/Tails/IUK/tuf-metadata",
       "repository_mirrors" : {
         "mirror1": {
           "url_prefix": "http://www.toannv.com/tuf",
