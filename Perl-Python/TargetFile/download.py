@@ -3,11 +3,9 @@ Author: Toan Nguyen
 Date: Nov 18, 2013
 Description: This file will be called by the UpdateDescriptionFile/Download.pm
 to actually download the updates.yml from update server then the return
-file will be piped into download.pm
+file will be piped into Download.pm
 '''
 
-import logging
-logger = logging.getLogger('tuf')
 import tuf.interposition
 from tuf.interposition import urllib2_tuf as urllib2
 import sys
@@ -18,12 +16,12 @@ try:
     response = urllib2.urlopen(url)
     print "HTTP/1.1",response.getcode(),"OK" #success
     print response.info() #then print the header
-    print '\n'
-    tmpFilename = "/tmp/" + url.rspilt('/',1)
-    f = open(tmpFilename,'w')
+    print '\n' #separate between header and content
+    tmpFilename = "/tmp/" + url.rsplit('/',1) + ".tmp" 
+    f = open(tmpFilename,'wb')
     f.write(response.read())
     f.close()
-    print  tmpFilename
+    print  tmpFilename #return filename of the target file downloaded by TUF
 #Otherwise, return error code
 except urllib2.HTTPError, e:
 	print e.code

@@ -91,11 +91,10 @@ method run () {
     $ua->max_size($self->size);
     #my $res = $ua->request($req, $temp_filename);
     my $command = "python /usr/share/perl5/Tails/IUK/TargetFile/download.py " . $self->uri;
-    print $command;
     my $content = `$command`; #force downloading go through TUF
-    print $content;
     my $res = HTTP::Response->parse($content); #Construct a new HTTP::Response object from returned file by TUF
-    $temp_filename = $res->decoded_content();
+    $temp_filename = $res->decoded_content(); #Get the filepath of downloaded target file
+    $temp_filename =~ s/\R//g; #Cut off the newline character at the end of the filename
     defined $res or clean_fatal($self, $temp_filename, sprintf(
         "Could not download '%s' to '%s': undefined result",
         $self->uri, $temp_filename,
