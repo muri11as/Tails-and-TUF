@@ -7,15 +7,15 @@ from tuf.libtuf import *
 ##CREATE RSA KEYS
 
 generate_and_write_rsa_keypair("/Users/Ceeze/Desktop/assignment3.3/tuf/rootkeys/root_key1",bits=3072,password="gogreen")
-generate_and_write_rsa_keypair("/Users/Ceeze/Desktop/assignment3.3/tuf/rootkeys/root_key2",bits=3072,password="gogreen")
+#generate_and_write_rsa_keypair("/Users/Ceeze/Desktop/assignment3.3/tuf/rootkeys/root_key2",bits=3072,password="gogreen")
 
 
 ##IMPORT RSA KEYS
 
 public_root_key = import_rsa_publickey_from_file("/Users/Ceeze/Desktop/assignment3.3/tuf/rootkeys/root_key1.pub")
 private_root_key = import_rsa_privatekey_from_file("/Users/Ceeze/Desktop/assignment3.3/tuf/rootkeys/root_key1",password="gogreen")
-public_root_key2 = import_rsa_publickey_from_file("/Users/Ceeze/Desktop/assignment3.3/tuf/rootkeys/root_key2.pub")
-private_root_key2 = import_rsa_privatekey_from_file("/Users/Ceeze/Desktop/assignment3.3/tuf/rootkeys/root_key2",password="gogreen")
+#public_root_key2 = import_rsa_publickey_from_file("/Users/Ceeze/Desktop/assignment3.3/tuf/rootkeys/root_key2.pub")
+#private_root_ = import_rsa_privatekey_from_file("/Users/Ceeze/Desktop/assignment3.3/tuf/rootkeys/root_key2",password="gogreen")
 
 ##CREATE ROOT
 
@@ -26,7 +26,7 @@ repository.root.add_key(public_root_key)
 repository.root.threshold = 1
 
 repository.root.load_signing_key(private_root_key)
-repository.root.load_signing_key(private_root_key2)
+#repository.root.load_signing_key(private_root_key2)
 
  ##CREATE TIMESTAMP, RELEASE, && TARGETS ROLES
 
