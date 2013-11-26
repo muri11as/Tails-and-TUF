@@ -7,18 +7,11 @@ This is the Tails Live OS Incremental Upgrade Kit (IUK) with TUF integrated.  To
    sudo sh setup.sh
    ```
 
-   This script will unzip the binaries for TUF and the Perl/Python bridge.  You will be asked for the sudo password twice to unzip the tar files.
+   This script will unzip the binaries for TUF and the Perl/Python bridge.  You will be asked for the sudo password to unzip the tar files. It will then patch the current IUK files with the modified ones to work with TUF.
 
-###2. Navigate to the Perl-Python directory:
-   ```shell
-   sudo sh setup.sh
-   ```
-
-   This will patch the current IUK files with the modified ones to work with TUF.
-
-###3. Run the update system:
+###2. Run the update system:
    ```shell
    tails-update-frontend
    ```
 
-   This will execute the Tails IUK Updater.
+   This will execute the Tails IUK Updater.  Periodically TOR will prevent the updater from working, after several attempts it should work.
