@@ -126,7 +126,8 @@ method get_url ($url) {
     #allow both http and https
     $ua->protocols_allowed([qw(http https)]);
     $ua->max_size($self->max_download_size);
-
+	#Gives us the ability to be able to see the progress of our downloads, for demos and such. -CM
+    $ua->show_progress(1);
     my $res = $ua->request(HTTP::Request->new('GET', $url));
 
     defined $res or croak(sprintf(

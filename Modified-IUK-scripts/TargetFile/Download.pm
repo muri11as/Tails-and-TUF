@@ -76,6 +76,8 @@ method run () {
 	#Make this request go through our Proxy, not Tor
 	$ua->proxy([qw(http https)] => 'http://0.0.0.0:8080');
     }
+    #Gives us the ability to be able to see the progress of our downloads, for demos and such. -CM
+    $ua->show_progress(1);
     $ua->protocols_allowed([qw(http https)]);
     my $req = HTTP::Request->new('GET', $self->uri);
 
