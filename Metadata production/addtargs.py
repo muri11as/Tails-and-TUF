@@ -21,7 +21,7 @@ repository.targets.add_target(list_of_targets[1])
 
 #IMPORT SIGNING KEYS
 private_root_key = import_rsa_privatekey_from_file("/Users/Ceeze/Desktop/assignment3.3/tuf/rootkeys/root_key1",password="gogreen")
-private_root_key2 = import_rsa_privatekey_from_file("/Users/Ceeze/Desktop/assignment3.3/tuf/rootkeys/root_key2",password="gogreen")
+#private_root_key2 = import_rsa_privatekey_from_file("/Users/Ceeze/Desktop/assignment3.3/tuf/rootkeys/root_key2",password="gogreen")
 private_timestamp_key = import_rsa_privatekey_from_file("/Users/Ceeze/Desktop/assignment3.3/tuf/keys/timestamp",password="gogreen")
 private_release_key = import_rsa_privatekey_from_file("/Users/Ceeze/Desktop/assignment3.3/tuf/keys/release",password="gogreen")
 private_targets_key = import_rsa_privatekey_from_file("/Users/Ceeze/Desktop/assignment3.3/tuf/keys/targets",password="gogreen")
@@ -34,7 +34,7 @@ repository.timestamp.load_signing_key(private_timestamp_key)
 repository.release.load_signing_key(private_release_key)
 repository.targets.load_signing_key(private_targets_key)
 repository.root.load_signing_key(private_root_key)
-repository.root.load_signing_key(private_root_key2)
+#repository.root.load_signing_key(private_root_key2)
 #NEW VERSIONS OF METADATA
 
 repository.write()
