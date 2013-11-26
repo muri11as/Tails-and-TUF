@@ -17,7 +17,7 @@ try:
     print "HTTP/1.1",response.getcode(),"OK" #success
     print response.info() #then print the header
     print '\n' #separate between header and content
-    tmpFilename = "/tmp/" + url.rsplit('/',1) + ".tmp" 
+    tmpFilename = "/tmp/" + url.rsplit('/',1)[1] + ".tmp" 
     f = open(tmpFilename,'wb')
     f.write(response.read())
     f.close()
