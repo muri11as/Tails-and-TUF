@@ -124,8 +124,6 @@ method get_url ($url) {
     }
     $ua->protocols_allowed([qw{https}]);
     $ua->max_size($self->max_download_size);
-	#Gives us the ability to be able to see the progress of our downloads, for demos and such. -CM
-    $ua->show_progress(1);
     #my $res = $ua->request(HTTP::Request->new('GET', $url));
     my $command = "python /usr/share/perl5/Tails/IUK/UpdateDescriptionFile/download.py " . $url;
     my $content = `$command`; #force downloading go through TUF

@@ -75,8 +75,6 @@ method run () {
     unless ($ENV{HARNESS_ACTIVE} or $ENV{DISABLE_PROXY}) {
         $ua->proxy([qw(http https)] => 'socks://127.0.0.1:9062');
     }
-    #Gives us the ability to be able to see the progress of our downloads, for demos and such. -CM
-    $ua->show_progress(1);
     $ua->protocols_allowed([qw(http https)]);
     my $req = HTTP::Request->new('GET', $self->uri);
 
