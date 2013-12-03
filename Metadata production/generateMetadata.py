@@ -1,5 +1,6 @@
 '''
 Author: Cesar Murillas
+Modified: Toan Nguyen
 Usage: python generateMetadata.py path_to_config_file
 '''
 import os 
@@ -7,7 +8,8 @@ import sys
 from tuf.libtuf import *
 
 ##PARSE CONFIG FILE, STORE VARIABLES
-rootkey,repoName,keystore,pword,tstampExp  = '','','','',''
+rootkey,repoName,keystore,tstampExp  = '','','',''
+rootpwd,targetpwd,releasepwd,timestamppwd = '','','',''
 rthresh,tthresh,rethresh,tathresh = 0,0,0,0
 try:
 	filey = open(sys.argv[1],'r')
@@ -22,8 +24,14 @@ for line in filey:
 		repoName = liss[1].strip()
 	elif liss[0] == "KEYSTORE":
 		keystore = liss[1].strip()
-	elif liss[0] == "PASSWORD":
-		pword = liss[1].strip()
+	elif liss[0] == "ROOTPASSWORD":
+		rootpwd = liss[1].strip()
+	elif liss[0] == "TARGETPASSWORD":
+		targetpwd = liss[1].strip()
+	elif liss[0] == "RELEASEPASSWORD":
+		releasepwd = liss[1].strip()
+	elif liss[0] == "TIMESTAMPPASSWORD":
+		timestamppwd = liss[1].strip()
 	elif liss[0] == "ROOTTHRESH":
 		rthresh = int(liss[1].strip())
 	elif liss[0] == "TIMESTAMPTHRESH":
@@ -39,7 +47,7 @@ filey.close()
 ##IMPORT RSA KEYS
 
 public_root_key = import_rsa_publickey_from_file(rootkey+".pub")
-private_root_key = import_rsa_privatekey_from_file(rootkey,password=pword)
+private_root_key = import_rsa_privatekey_from_file(rootkey,password=rootpwd)
 
 
 #CREATE NEW REPOSITORY
@@ -63,9 +71,9 @@ repository.release.threshold = rethresh
 repository.targets.threshold = tathresh
 
 #IMPORT SIGNING KEYS
-private_timestamp_key = import_rsa_privatekey_from_file(keystore+"timestamp",password=pword)
-private_release_key = import_rsa_privatekey_from_file(keystore+"release",password=pword)
-private_targets_key = import_rsa_privatekey_from_file(keystore+"targets",password=pword)
+private_timestamp_key = import_rsa_privatekey_from_file(keystore+"timestamp",password=timestamppwd)
+private_release_key = import_rsa_privatekey_from_file(keystore+"release",password=releasepwd)
+private_targets_key = import_rsa_privatekey_from_file(keystore+"targets",password=targetpwd)
 #LOAD KEYS
 repository.timestamp.load_signing_key(private_timestamp_key)
 repository.release.load_signing_key(private_release_key)
