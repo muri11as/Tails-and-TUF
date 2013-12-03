@@ -1,9 +1,14 @@
 There are two ways of creating metadata for TUF included in these instructions.
 The first way is automatically, the second is manually.
 
-TO RUN ALL SCRIPTS TO CREATE NEW METADATA AUTOMATICALLY:
+TO RUN ALL SCRIPTS TO CREATE NEW METADATA AUTOMATICALLY
 **WARNING** ALL CONFIGURATION FILES ARE DESIGNED WITH VARIABLE=YOURINPUT, DO NOT CHANGE FORMAT!!
-
+	As a prerequesite, you need to install the TUF REPOSITORY TOOLS:
+		To Install, in a shell run the following:
+			$ virtualenv --no-site-packages (Pick a name)
+			$ source (Name you picked)/bin/activate
+			$ pip install --upgrade https://github.com/theupdateframework/tuf/archive/repository-tools.zip
+			
 	1. Download all files into a folder of your choosing
 	2. Open all config.txt files
 		setupconfig.txt
