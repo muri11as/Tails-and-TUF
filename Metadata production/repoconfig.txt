@@ -1,0 +1,4 @@
+ROOTKEY=/Users/Ceeze/Desktop/tuf/rootkeys/root_key
+REPONAME=/Users/Ceeze/Desktop/assignment3.3/tuf
+KEYSTORE=/keys/
+PASSWORD=gogreen
