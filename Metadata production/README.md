@@ -1,7 +1,8 @@
 There are two ways of creating metadata for TUF included in these instructions.
 The first way is automatically, the second is manually.
 
-TO RUN ALL SCRIPTS TO CREATE NEW METADATA AUTOMATICALLY:
+TO RUN ALL SCRIPTS TO CREATE NEW METADATA AUTOMATICALLY
+
 **WARNING** ALL CONFIGURATION FILES ARE DESIGNED WITH VARIABLE=YOURINPUT, DO NOT CHANGE FORMAT!!
 
 	1. Download all files into a folder of your choosing
