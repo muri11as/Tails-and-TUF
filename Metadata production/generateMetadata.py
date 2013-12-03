@@ -1,14 +1,19 @@
 '''
 Author: Cesar Murillas
+Usage: python generateMetadata.py path_to_config_file
 '''
 import os 
+import sys
 from tuf.libtuf import *
 
 ##PARSE CONFIG FILE, STORE VARIABLES
 rootkey,repoName,keystore,pword,tstampExp  = '','','','',''
 rthresh,tthresh,rethresh,tathresh = 0,0,0,0
-
-filey = open("/Users/Ceeze/Desktop/repoconfig.txt",'r')
+try:
+	filey = open(sys.argv[1],'r')
+except:
+	print "Can't read config file"
+	sys.exit(1)
 for line in filey:
 	liss= line.split('=',1)
 	if liss[0] == "ROOTKEY":
