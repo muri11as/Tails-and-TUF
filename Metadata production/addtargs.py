@@ -9,7 +9,7 @@ USAGE: run python addtargs.py path/to/targetsconfig.txt
 from tuf.libtuf import *
 import os 
 
-repo,keystore = '',''
+repoName,keystore = '',''
 targetspwd,releasepwd,timestamppwd = '','',''
 
 try:
@@ -36,10 +36,10 @@ for line in filey:
 
 ##ADD TARGET FILES
 '''Make sure the target files are saved in the targets directory of the repository'''
-repository = load_repository(repo)
+repository = load_repository(repoName)
 #Get list of file all file paths
 
-list_of_targets = repository.get_filepaths_in_directory(repo+"targets", recursive_walk=True, followlinks=True)
+tList = repository.get_filepaths_in_directory(repoName+"targets", recursive_walk=True, followlinks=True)
 
 #Add List of target files to the targets metadata
 

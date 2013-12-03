@@ -1,5 +1,5 @@
-REPONAME=/Users/Ceeze/Desktop/tuf
-KEYSTORE=/Users/Ceeze/Desktop/keys
+REPONAME=/Users/Ceeze/Desktop/tuf/
+KEYSTORE=/Users/Ceeze/Desktop/keys/
 TARGETPASSWORD=target!gogreen
 RELEASEPASSWORD=release#gorged
 TIMESTAMPPASSWORD=time$gogreen
