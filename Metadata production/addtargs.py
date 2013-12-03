@@ -9,7 +9,7 @@ USAGE: run python addtargs.py path/to/targetsconfig.txt
 from tuf.libtuf import *
 import os 
 
-repo,keystore = '',''
+repoName,keystore = '',''
 targetspwd,releasepwd,timestamppwd = '','',''
 
 try:
@@ -36,17 +36,10 @@ for line in filey:
 
 ##ADD TARGET FILES
 '''Make sure the target files are saved in the targets directory of the repository'''
-repository = load_repository(repo)
+repository = load_repository(repoName)
 #Get list of file all file paths
 
-list_of_targets = repository.get_filepaths_in_directory(repo+"targets", recursive_walk=True, followlinks=True)
-
-
-#GET RID OF .DS_Stores PRODUCED BY MACOSX, COMMENT OUT IF NEEDED
-#os.system("cd /Users/Ceeze/Desktop/assignment3.3/tuf/targets")
-#os.system("find . -name '*.DS_Store' -type f -delete")
-
-#print list_of_targets
+tList = repository.get_filepaths_in_directory(repoName+"targets", recursive_walk=True, followlinks=True)
 
 #Add List of target files to the targets metadata
 
@@ -57,7 +50,6 @@ for targ in tList:
 private_timestamp_key = import_rsa_privatekey_from_file(keystore+"timestamp",password=timestamppwd)
 private_release_key = import_rsa_privatekey_from_file(keystore+"release",password=releasepwd)
 private_targets_key = import_rsa_privatekey_from_file(keystore+"targets",password=targetspwd)
-
 
 #LOAD SIGNING KEYS
 

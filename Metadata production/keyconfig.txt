@@ -1,5 +1,5 @@
-ROOTKEYSTORE=/Users/Ceeze/Desktop/tuf/rootkeys/root_key/
-KEYSTORE=/Users/Ceeze/Desktop/tuf/keys/
+ROOTKEYSTORE=/Users/Ceeze/Desktop/rootkeys/root_key/
+KEYSTORE=/Users/Ceeze/Desktop/keys/
 ROOTPASSWORD=root@gogreen
 TARGETPASSWORD=target!gogreen
 RELEASEPASSWORD=release#gogreen
