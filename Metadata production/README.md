@@ -94,8 +94,19 @@ These Scripts are to be used to produce TUF metadata offline, and then uploaded/
 				PATHTOLIVE: Where you want your live metadata folder to go (server?).
 		Run copyToRepository.py
 			python copyToRepository.py path/to/copyconfig.txt
-    		This is used to create a final copy of your metadata and you can then upload to your TUF server
-    		
+    		This is used to create a final copy of your metadata and you can then upload to your TUF server.   		
 ========================================================================================================================
+	To add a Delegation:
+		-Change delconfig.txt
+			DELCONFIG.TXT:
+				REPO: Where your repository is.
+				ROLENAME: What you want to name your new delegated role.
+				PATHTODELKEY: Path to where you want to save your new key for this role.
+				DELPASSWORD: Password for your new role.
+		Run addDelegation.py
+			python addDelegation.py path/to/delconfig.txt
+			This is used to create a new delegated role for your TUF Metadata.
+========================================================================================================================
+
 Our TUF Metadata is relatively small and efficient. It contains our updates.yml (Update Description File) as a target, as well as the
 Target files (either IUK, or full ISO) and the URL's from where they can be downloaded. 

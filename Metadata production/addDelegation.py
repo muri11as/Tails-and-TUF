@@ -6,7 +6,7 @@ USAGE: RUN addDelegation.py path/to/delconfig.txt
 '''
 from tuf.libtuf import *
 
-##GENERATE KEY (TEMPORARILY DOING HERE, WOULD NORMALLY BE DONE IN keyconfig.txt/generateKeyStore.py)
+##GENERATE KEYS (TEMPORARILY DOING HERE, WOULD NORMALLY BE DONE IN keyconfig.txt/generateKeyStore.py)
 
 ##PARSE CONFIG FILE FOR ROOTPATH, PATH AND PASSWORD
 repoName,role,path,delpwd = '','','',''
