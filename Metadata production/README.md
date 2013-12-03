@@ -1,4 +1,8 @@
+There are two ways of creating metadata for TUF included in these instructions.
+The first way is automatically, the second is manually.
+
 TO RUN ALL SCRIPTS TO CREATE NEW METADATA AUTOMATICALLY:
+
 	1. Download all files into a folder of your choosing
 	2. Open all config.txt files
 		setupconfig.txt
@@ -50,9 +54,15 @@ TO RUN ALL SCRIPTS TO CREATE NEW METADATA AUTOMATICALLY:
 	6. Run setup.py
 		"python setup.py /path/to/setupconfig.txt"
 
+
 INDIVIDUAL SCRIPT INSTRUCTIONS:
 
 These Scripts are to be used to produce TUF metadata offline, and then uploaded/copied to the TUF server.
+
+To generate new keys:
+	Run: generateKeystore.py path/to/keyconfig.txt
+	NOTE: Use Above instructions to setup your keyconfig.txt file.
+
 
 To generate a new Repository:
   
@@ -60,15 +70,15 @@ To generate a new Repository:
     **Remember to store your Root Private Key(s) somewhere OFFLINE.**
     NOTE: Use Above instructions to setup your repoconfig.txt file.
 
-To add target files to the metadata:
-
-  Run: addtargs.py
-    **HAVE A FOLDER YOU WANT TO COPY FROM WITH TARGET FILES** Use this as 
     
 To make a "Live" copy of your metadata after production is finished:
 
-  Run: copyToRepository.py
+  Run: copyToRepository.py path/to/copyconfig.txt
     **This is used to create a final copy of your metadata and you can then upload to your TUF server**
+    -Change copyconfig.txt 
+		COPYCONFIG.TXT:
+			PATHTO.STAGED: Where your metadata.staged foler is located.
+			PATHTOLIVE: Where you want your live metadata folder to go (server?).
 
 Our TUF Metadata is relatively small and efficient. It contains our updates.yml (Update Description File) as a target, as well as the
 Target files (either IUK, or full ISO) and the URL's from where they can be downloaded. 
