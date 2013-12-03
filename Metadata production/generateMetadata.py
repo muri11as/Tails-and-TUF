@@ -15,7 +15,7 @@ rthresh,tthresh,rethresh,tathresh = 0,0,0,0
 try:
 	filey = open(sys.argv[1],'r')
 except:
-	print "Can't read config file"
+	print "Can't read config file!"
 	sys.exit(1)
 	
 for line in filey:

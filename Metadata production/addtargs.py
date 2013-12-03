@@ -41,13 +41,6 @@ repository = load_repository(repo)
 
 list_of_targets = repository.get_filepaths_in_directory(repo+"targets", recursive_walk=True, followlinks=True)
 
-
-#GET RID OF .DS_Stores PRODUCED BY MACOSX, COMMENT OUT IF NEEDED
-#os.system("cd /Users/Ceeze/Desktop/assignment3.3/tuf/targets")
-#os.system("find . -name '*.DS_Store' -type f -delete")
-
-#print list_of_targets
-
 #Add List of target files to the targets metadata
 
 for targ in tList:
@@ -57,7 +50,6 @@ for targ in tList:
 private_timestamp_key = import_rsa_privatekey_from_file(keystore+"timestamp",password=timestamppwd)
 private_release_key = import_rsa_privatekey_from_file(keystore+"release",password=releasepwd)
 private_targets_key = import_rsa_privatekey_from_file(keystore+"targets",password=targetspwd)
-
 
 #LOAD SIGNING KEYS
 
