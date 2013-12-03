@@ -2,10 +2,6 @@ There are two ways of creating metadata for TUF included in these instructions.
 The first way is automatically, the second is manually.
 
 TO RUN ALL SCRIPTS TO CREATE NEW METADATA AUTOMATICALLY
-<<<<<<< HEAD
-=======
-
->>>>>>> 51c2c9d80803c9bbd55e8c56bf45d5f50bb8b3a0
 **WARNING** ALL CONFIGURATION FILES ARE DESIGNED WITH VARIABLE=YOURINPUT, DO NOT CHANGE FORMAT!!
 	As a prerequesite, you need to install the TUF REPOSITORY TOOLS:
 		To Install, in a shell run the following:
