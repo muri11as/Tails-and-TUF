@@ -9,8 +9,8 @@ list_of_targets = repository.get_filepaths_in_directory("/Users/Ceeze/Desktop/as
 
 
 #GET RID OF .DS_Stores PRODUCED BY MACOSX, COMMENT OUT IF NEEDED
-os.system("cd /Users/Ceeze/Desktop/assignment3.3/tuf/targets")
-os.system("find . -name '*.DS_Store' -type f -delete")
+#os.system("cd /Users/Ceeze/Desktop/assignment3.3/tuf/targets")
+#os.system("find . -name '*.DS_Store' -type f -delete")
 
 #print list_of_targets
 

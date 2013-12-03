@@ -1,0 +1,3 @@
+ROOTKEYSTORE=/Users/Ceeze/Desktop/tuf/rootkeys/root_key/
+KEYSTORE=/Users/Ceeze/Desktop/tuf/keys/
+PASSWORD=gogreen
