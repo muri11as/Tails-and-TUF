@@ -1,14 +1,21 @@
 There are two ways of creating metadata for TUF included in these instructions.
-The first way is automatically, the second is manually.
+		
+		I. Automatically
+		II. Manually.
 
-TO RUN ALL SCRIPTS TO CREATE NEW METADATA AUTOMATICALLY
-**WARNING** ALL CONFIGURATION FILES ARE DESIGNED WITH VARIABLE=YOURINPUT, DO NOT CHANGE FORMAT!!
+**AUTOMATICALLY**
+	
+	TO RUN ALL SCRIPTS TO CREATE NEW METADATA AUTOMATICALLY
+	**WARNING** ALL CONFIGURATION FILES ARE DESIGNED WITH VARIABLE=YOURINPUT, DO NOT CHANGE FORMAT!!
+		
 	As a prerequesite, you need to install the TUF REPOSITORY TOOLS:
-		To Install, in a shell run the following:
+		To Install, in a shell run the following:				
 			$ virtualenv --no-site-packages (Pick a name)
 			$ source (Name you picked)/bin/activate
 			$ pip install --upgrade https://github.com/theupdateframework/tuf/archive/repository-tools.zip
-			
+	
+	Source: https://docs.google.com/document/d/1n-4G8cfuGMCBwXDgkj52DuBhRG5Di6YW9p8IaH-fIxc/edit?pli=1#
+========================================================================================================================	
 	1. Download all files into a folder of your choosing
 	2. Open all config.txt files
 		setupconfig.txt
@@ -18,15 +25,18 @@ TO RUN ALL SCRIPTS TO CREATE NEW METADATA AUTOMATICALLY
 	3. Setup all of your config files to your preference
 	4. MAKE SURE ALL FILES IN THIS FOLDER REMAIN IN THE SAME FOLDER:
 		SETUPCONFIG.TXT:
-			
 			PATHTODIRECTORY
 			PATHTOTARGETS
 			OLDTARGETSPATH
 			OLDREPO
 			LIVEREPO	
-		
-			-Change PATHTODIRECTORY: To your current directory where this folder is. Make sure all of the included files are present. *WILL NOT WORK IF THE CONFIG FILES ARE NOT IN THE SAME DIRECTORY AS THE SCRIPTS**
-			-Change PATHTOTARGETS: To the targets folder you want to fill your repository targets folder with. EX: you have your target files in a "model" targets folder elsewhere on your machine. You want this targets folder to contain your target files. This targets folder will replace the one created by the automated script. 
+			-Change PATHTODIRECTORY: To your current directory where this folder is.
+						Make sure all of the included files are present.
+						**WILL NOT WORK IF THE CONFIG FILES ARE NOT IN THE SAME DIRECTORY AS THE SCRIPTS**
+			-Change PATHTOTARGETS: To the targets folder you want to fill your repository targets folder with.
+						EX: you have your target files in a "model" targets folder elsewhere on your machine.
+						You want this targets folder to contain your target files. 
+						This targets folder will replace the one created by the automated script. 
 			-Change OLDTARGETSPATH: To your current repository/targets folder. Example: users/home/tuf/targets
 			-Change OLDREPO: To path/to/repo/metadata.staged
 			-Change LIVEREPO: To path/to/repo/metadata (This will be your "live" and finalized metadata for your server)
@@ -59,7 +69,8 @@ TO RUN ALL SCRIPTS TO CREATE NEW METADATA AUTOMATICALLY
 			TIMESTAMPPASSWORD: Same as in repoconfig.txt && keyconfig.txt.
 	6. Run setup.py
 		"python setup.py /path/to/setupconfig.txt"
-
+========================================================================================================================
+**MANUALLY**
 
 INDIVIDUAL SCRIPT INSTRUCTIONS:
 
@@ -69,25 +80,22 @@ These Scripts are to be used to produce TUF metadata offline, and then uploaded/
 		Run generateKeyStore.py 
 			python generateKeystore.py path/to/keyconfig.txt
 		NOTE: Use Above instructions to setup your keyconfig.txt file.
-
-
+========================================================================================================================
 	To generate a new Repository:
-  
 		Run generateMetadata.py
 			python generateMetadata.py path/to/repoconfig.txt
 		Remember to store your Root Private Key(s) somewhere OFFLINE.
 		NOTE: Use Above instructions to setup your repoconfig.txt file.
-
-    
+========================================================================================================================  
 	To make a "Live" copy of your metadata after production is finished:
-
-		Run copyToRepository.py
-			python copyToRepository.py path/to/copyconfig.txt
-    This is used to create a final copy of your metadata and you can then upload to your TUF server
-    	-Change copyconfig.txt 
+		-Change copyconfig.txt 
 			COPYCONFIG.TXT:
 				PATHTO.STAGED: Where your metadata.staged foler is located.
 				PATHTOLIVE: Where you want your live metadata folder to go (server?).
-
+		Run copyToRepository.py
+			python copyToRepository.py path/to/copyconfig.txt
+    		This is used to create a final copy of your metadata and you can then upload to your TUF server
+    		
+========================================================================================================================
 Our TUF Metadata is relatively small and efficient. It contains our updates.yml (Update Description File) as a target, as well as the
 Target files (either IUK, or full ISO) and the URL's from where they can be downloaded. 
