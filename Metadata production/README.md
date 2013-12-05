@@ -17,6 +17,7 @@ There are two ways of creating metadata for TUF included in these instructions.
 	Source: https://docs.google.com/document/d/1n-4G8cfuGMCBwXDgkj52DuBhRG5Di6YW9p8IaH-fIxc/edit?pli=1#
 ========================================================================================================================	
 	1. Download all files into a folder of your choosing
+		**After downloading, place all files in the Config Files folder, in the same folder as the scripts.**
 	2. Open all config.txt files
 		setupconfig.txt
 		keyconfig.txt
