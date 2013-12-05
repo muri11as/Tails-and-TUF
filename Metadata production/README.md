@@ -51,7 +51,7 @@ There are two ways of creating metadata for TUF included in these instructions.
 		REPOCONFIG.TXT:
 			ROOTKEY: Path to your rootkey.
 			REPONAME: Path to your repository.
-			KEYSTORE: Path to where your non rootkeys are stored, same ad in keyconfig.txt.
+			KEYSTORE: Path to where your non rootkeys are stored, same as in keyconfig.txt.
 			ROOTPASSWORD: Same as in keyconfig.txt. 
 			TARGETPASSWORD: Same as in keyconfig.txt. 
 			RELEASEPASSWORD: Same as in keyconfig.txt. 
