@@ -64,7 +64,9 @@ There are two ways of creating metadata for TUF included in these instructions.
 			TIMESTAMPEXP: Expiration date and time for Timestamp Role in: YYYY-MM-DD HH:MM:SS format.
 		TARGETCONFIG.TXT:
 			REPONAME: Path to your repository, same as in repoconfig.txt.
+			ROOTKEYSTORE: Path to where your rootkey is stored EX: /users/name/Desktop/rootkeys/rootkey
 			KEYSTORE: Path to where your non rootkeys are stored, same as in repoconfig.txt && keyconfig.txt.
+			ROOTPASSWORD: same as in repoconfig.txt && keyconfig.txt.
 			TARGETPASSWORD: Same as in repoconfig.txt && keyconfig.txt.
 			RELEASEPASSWORD: Same as in repoconfig.txt && keyconfig.txt.
 			TIMESTAMPPASSWORD: Same as in repoconfig.txt && keyconfig.txt.
@@ -104,6 +106,11 @@ These Scripts are to be used to produce TUF metadata offline, and then uploaded/
 				ROLENAME: What you want to name your new delegated role.
 				PATHTODELKEY: Path to where you want to save your new key for this role.
 				DELPASSWORD: Password for your new role.
+				ROOTKEYSTORE: Path to where your rootkey is stored EX: path/to/rootkey
+				ROOTPASSWORD: Password for root role.
+				TARGETPASSWORD: Password for targets role.
+				RELEASEPASSWORD: Password for release role.
+				TIMESTAMPPASSWORD: Password for timestamp role.
 		Run addDelegation.py
 			python addDelegation.py path/to/delconfig.txt
 			This is used to create a new delegated role for your TUF Metadata.
