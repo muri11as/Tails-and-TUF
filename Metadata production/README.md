@@ -49,6 +49,9 @@ There are two ways of creating metadata for TUF included in these instructions.
 			TARGETPASSWORD: Password for your targets role.
 			RELEASEPASSWORD: Password for your release role.
 			TIMESTAMPPASSWORD: Password for your timestamp role.
+			STABLEPASSWORD: Password for Tails specific delegated role "stable".
+			BETAPASSWORD: Password for Tails specific delegated role "beta".
+			NIGHTLYPASSWORD: Password for Tails specific delegated role "nightly".
 		REPOCONFIG.TXT:
 			ROOTKEY: Path to your rootkey.
 			REPONAME: Path to your repository.
@@ -70,6 +73,9 @@ There are two ways of creating metadata for TUF included in these instructions.
 			TARGETPASSWORD: Same as in repoconfig.txt && keyconfig.txt.
 			RELEASEPASSWORD: Same as in repoconfig.txt && keyconfig.txt.
 			TIMESTAMPPASSWORD: Same as in repoconfig.txt && keyconfig.txt.
+			STABLEPASSWORD: Same as in keyconfig.txt.
+			BETAPASSWORD: Same as in keyconfig.txt.
+			NIGHTLYPASSWORD: Same as in keyconfig.txt
 	6. Run setup.py
 		"python setup.py /path/to/setupconfig.txt"
 ========================================================================================================================
@@ -93,7 +99,7 @@ These Scripts are to be used to produce TUF metadata offline, and then uploaded/
 	To make a "Live" copy of your metadata after production is finished:
 		-Change copyconfig.txt 
 			COPYCONFIG.TXT:
-				PATHTO.STAGED: Where your metadata.staged foler is located.
+				PATHTO.STAGED: Where your metadata.staged folder is located.
 				PATHTOLIVE: Where you want your live metadata folder to go (server?).
 		Run copyToRepository.py
 			python copyToRepository.py path/to/copyconfig.txt

@@ -4,3 +4,7 @@ ROOTPASSWORD=root@gogreen
 TARGETPASSWORD=target!gogreen
 RELEASEPASSWORD=release#gogreen
 TIMESTAMPPASSWORD=time$gogreen
+STABLEPASSWORD=stable%gogreen
+STABLEPASSWORD=stable%gogreen
+BETAPASSWORD=beta^gogreen
+NIGHTLYPASSWORD=nightly&gogreen
