@@ -15,3 +15,8 @@ This is the Tails Live OS Incremental Upgrade Kit (IUK) with TUF integrated.  To
    ```
 
    This will execute the Tails IUK Updater.  Periodically TOR will prevent the updater from working, after several attempts it should work.
+
+For more detailed information regarding the following, please refer to the corresponding links provided:
+   - Integration of TUF with Tails IUK update system (https://github.com/mur1llas/Tails-and-TUF/wiki)
+   - Tails OS (https://tails.boum.org)
+   - TUF - The Update Framework (https://updateframework.com/projects/project)
