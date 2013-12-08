@@ -17,18 +17,18 @@ There are two ways of creating metadata for TUF included in these instructions.
 	Source: https://docs.google.com/document/d/1n-4G8cfuGMCBwXDgkj52DuBhRG5Di6YW9p8IaH-fIxc/edit?pli=1#
 ========================================================================================================================	
 	1. Download all files into a folder of your choosing
-		**After downloading, place all files in the Config Files folder, in the same folder as the scripts.**
+		**After downloading, place all files in the Config Files folder, in the same folder as the scripts.
 	2. Open all config.txt files
-		setupconfig.txt
-		keyconfig.txt
-		repoconfig.txt
-		targetconfig.txt
+		-setupconfig.txt
+		-keyconfig.txt
+		-repoconfig.txt
+		-targetconfig.txt
 	3. Setup all of your config files to your preference
 	4. MAKE SURE ALL FILES IN THIS FOLDER REMAIN IN THE SAME FOLDER:
 		SETUPCONFIG.TXT:
 			PATHTODIRECTORY
 			PATHTOTARGETS
-			OLDTARGETSPATH
+			REPO
 			OLDREPO
 			LIVEREPO	
 			-Change PATHTODIRECTORY: To your current directory where this folder is.
@@ -38,9 +38,9 @@ There are two ways of creating metadata for TUF included in these instructions.
 						EX: you have your target files in a "model" targets folder elsewhere on your machine.
 						You want this targets folder to contain your target files. 
 						This targets folder will replace the one created by the automated script. 
-			-Change OLDTARGETSPATH: To your current repository/targets folder. Example: users/home/tuf/targets
-			-Change OLDREPO: To path/to/repo/metadata.staged
-			-Change LIVEREPO: To path/to/repo/metadata (This will be your "live" and finalized metadata for your server)
+			-Change REPO: To your current path/to/repository folder. Example: users/home/tuf/
+				**INCLUDE THE / at the end**
+
 	5. Change the remaining fields in the other config.txt files to suit your needs.
 		KEYCONFIG.TXT:
 			ROOTKEYSTORE: Should be the path to where you want to store your RSA rootkey pair.

@@ -8,7 +8,7 @@ USAGE: RUN python setup.py path/to/setupconfig.txt
 
 import subprocess 
 import sys 
-abspath,filled, empty, old, live = '','','','',''
+abspath,filled, repo = '','',''
 
 try:
 	filey = open(sys.argv[1],'r')
@@ -21,12 +21,9 @@ for line in filey:
 		abspath = liss[1].strip()
 	elif liss[0] == "PATHTOTARGETS":
 		filled = liss[1].strip()
-	elif liss[0] == "OLDTARGETSPATH":
-		empty = liss[1].strip()
-	elif liss[0] == "OLDREPO":
-		old = liss[1].strip()
-	elif liss[0] == "LIVEREPO":
-		live = liss[1].strip()
+	elif liss[0] == "REPO":
+		repo = liss[1].strip()
+
 		
 filey.close()	
 
@@ -35,10 +32,8 @@ filey.close()
 keys = "python "+abspath+"generateKeystore.py "+abspath+"keyconfig.txt"
 makeRepo = "python "+abspath+"generateRepositoryLocal.py "+abspath+"repoconfig.txt"
 addTarg = "python "+abspath+"addtargs.py "+abspath+"targetconfig.txt"
-fillTargs= "cp -r "+filled+" "+empty
-goLive = "cp -r "+old+" "+live
-#print "keys: "+keys
-
+fillTargs= "cp -r "+filled+" "+repo
+goLive = "cp -r "+repo+"metadata.staged "+repo+"metadata"
 
 subprocess.call(keys, shell=True)
 subprocess.call(makeRepo, shell=True)

@@ -1,5 +1,4 @@
 PATHTODIRECTORY=/Users/Ceeze/Desktop/
 PATHTOTARGETS=/Users/Ceeze/Desktop/targets
-OLDTARGETSPATH=/Users/Ceeze/Desktop/tuf/targets
-OLDREPO=/Users/Ceeze/Desktop/tuf/metadata.staged
-LIVEREPO=/Users/Ceeze/Desktop/tuf/metadata
+REPO=/Users/Ceeze/Desktop/tuf/targets
+
