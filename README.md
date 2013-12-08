@@ -2,14 +2,18 @@
 
 This is the Tails Live OS Incremental Upgrade Kit (IUK) with TUF integrated.  To install clone this github to your Tails Live OS system.
 
-###1. Navigate to the Demo directory in a terminal window:
+###1. Log into Tails with More Options:
+
+   On the Tails startup screen, you must select YES to More options, to be able to enter a root password.  You will need this password later when installing the TUF files.
+
+###2. Navigate to the Demo directory in a terminal window:
    ```shell
    sudo sh setup.sh
    ```
 
    This script will unzip the binaries for TUF and the Perl/Python bridge.  You will be asked for the sudo password to unzip the tar files. It will then patch the current IUK files with the modified ones to work with TUF.
 
-###2. Run the update system:
+###3. Run the update system:
    ```shell
    tails-update-frontend
    ```
