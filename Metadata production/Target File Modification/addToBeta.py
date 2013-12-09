@@ -1,16 +1,16 @@
 '''
 
 AUTHOR: CESAR MURILLAS
-DESCRIPTION: THIS SCRIPT WILL REMOVE TARGETS ROLE METADATA TO MAKE ROOM FOR NEW
-USAGE: run python removeTargs.py path/to/targetconfig.txt
+DESCRIPTION: THIS SCRIPT WILL ADD TARGET FILES TO TARGETS ROLE METADATA
+USAGE: run python addtargs.py path/to/targetsconfig.txt
 
 '''
 
 from tuf.libtuf import *
 import os 
 
-repoName,rkeystore,keystore = '','',''
-rootpwd,targetspwd,releasepwd,timestamppwd,del1pwd = '','','','',''
+repoName,rkeystore,keystore, updatePath = '','','',''
+rootpwd,targetspwd,releasepwd,timestamppwd = '','','',''
 
 try:
 	filey = open(sys.argv[1],'r')
@@ -30,6 +30,9 @@ for line in filey:
 			
 	elif liss[0] == "ROOTPASSWORD":
 		rootpwd = liss[1].strip()
+	
+	elif liss[0] == "TARGETSTRUCTURE":
+		updatePath = liss[1].strip()
 		
 	elif liss[0] == "TARGETPASSWORD":
 		targetspwd = liss[1].strip()
@@ -40,33 +43,36 @@ for line in filey:
 	elif liss[0] == "TIMESTAMPPASSWORD":
 		timestamppwd = liss[1].strip()
 		
-	elif liss[0] == "STABLEPASSWORD":
-		del1pwd = liss[1].strip()
-		
 filey.close()
 
+#ADD TARGET FILES
+channel = sys.argv[2]
+del1pwd = sys.argv[3]
 repository = load_repository(repoName)
 
-#REMOVE ALL TARGETS
-#repository.targets.stable.clear_targets()
-#repository.targets.clear_targets()
-repository.targets.revoke("stable")
-#repository.targets.revoke("beta")
-#repository.targets.revoke("nightly")
+#GET LIST OF ALL TARGET FILES
+sList = repository.get_filepaths_in_directory(repoName+updatePath+channel, recursive_walk=True, followlinks=True)
+
+#IMPORT DELEGATE PUBLIC KEY
+public_del1_key = import_rsa_publickey_from_file(keystore+channel+".pub")
 
 #IMPORT SIGNING KEYS
-#private_del1_key = import_rsa_privatekey_from_file(keystore+"stable",password=del1pwd)
+private_del1_key = import_rsa_privatekey_from_file(keystore+channel,password=del1pwd)
 private_root_key = import_rsa_privatekey_from_file(rkeystore+"root_key",password=rootpwd)
 private_timestamp_key = import_rsa_privatekey_from_file(keystore+"timestamp",password=timestamppwd)
 private_release_key = import_rsa_privatekey_from_file(keystore+"release",password=releasepwd)
 private_targets_key = import_rsa_privatekey_from_file(keystore+"targets",password=targetspwd)
 
+#ADD DELEGATE
+repository.targets.delegate(channel,[public_del1_key], sList)
+repository.targets.beta.version = repository.targets.version+1
+
 #LOAD SIGNING KEYS
+repository.targets.beta.load_signing_key(private_del1_key)
 repository.root.load_signing_key(private_root_key)
 repository.targets.load_signing_key(private_targets_key)
 repository.timestamp.load_signing_key(private_timestamp_key)
 repository.release.load_signing_key(private_release_key)
-#repository.targets.stable.load_signing_key(private_del1_key)
 
 #NEW VERSIONS OF METADATA
 repository.write()

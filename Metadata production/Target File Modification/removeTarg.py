@@ -1,7 +1,7 @@
 '''
 
 AUTHOR: CESAR MURILLAS
-DESCRIPTION: THIS SCRIPT WILL ADD TARGET FILES TO TARGETS ROLE METADATA
+DESCRIPTION: THIS SCRIPT WILL REMOVE TARGETS ROLE METADATA TO MAKE ROOM FOR NEW
 USAGE: run python removeTargs.py path/to/targetconfig.txt
 
 '''
@@ -11,7 +11,6 @@ import os
 
 repoName,rkeystore,keystore = '','',''
 rootpwd,targetspwd,releasepwd,timestamppwd = '','','',''
-del1pwd,del2pwd,del3pwd = '','',''
 
 try:
 	filey = open(sys.argv[1],'r')
@@ -40,24 +39,14 @@ for line in filey:
 		
 	elif liss[0] == "TIMESTAMPPASSWORD":
 		timestamppwd = liss[1].strip()
-
-	elif liss[0] == "STABLEPASSWORD":
-		del1pwd = liss[1].strip()
-		
-	elif liss[0] == "BETAPASSWORD":
-		del2pwd = liss[1].strip()
-		
-	elif liss[0] == "NIGHTLYPASSWORD":
-		del3pwd = liss[1].strip()
 		
 filey.close()
-
+channel = sys.argv[2]
 repository = load_repository(repoName)
 
 #REMOVE ALL TARGETS
-repository.targets.revoke("stable")
-repository.targets.revoke("beta")
-repository.targets.revoke("nightly")
+repository.targets.revoke(channel)
+
 
 #IMPORT SIGNING KEYS
 private_root_key = import_rsa_privatekey_from_file(rkeystore+"root_key",password=rootpwd)

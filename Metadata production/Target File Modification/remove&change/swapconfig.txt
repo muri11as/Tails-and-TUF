@@ -1,4 +1,0 @@
-PATHTODIRECTORY=/Users/Ceeze/Desktop/
-PATHTOTARGETS=/Users/Ceeze/Desktop/moo
-REPO=/Users/Ceeze/Desktop/tuf/
-TARGETSTRUCTURE=targets/update/v1/Tails/0.21/i386/
