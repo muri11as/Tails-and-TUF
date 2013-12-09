@@ -4,17 +4,20 @@ TUF Metadata for Tails has been created with three delegated roles in mind.
 	II. BETA
 	III. NIGHTLY
 
-The stable channel is currently the only one being implemented in Tails, so our focus is on that. We have still implemented the other two delegated roles in anticipation of future efforts.
+	The stable channel is currently the only one being implemented in Tails, so our focus is on that. We have still implemented the other two delegated roles in anticipation of future efforts.
 
 
-The three channels represent different methods to download updates, specifically differing in the amount of time in between each update. Stable, beta, and nightly is the order of these channels, with stable having the least frequent updates, and nightly the most.
-
+	The three channels represent different methods to download updates, specifically differing in the amount of time in between each update. Stable, beta, and nightly is the order of these channels, with stable having the least frequent updates, and nightly the most.
+	
+========================================================================================================================	
 
 
 There are two ways of creating metadata for TUF included in these instructions.
 		
 		I. Automatically
 		II. Manually.
+		
+		To change target file metadata refer to the bottom.		
 
 **AUTOMATICALLY**
 	
@@ -135,7 +138,9 @@ These Scripts are to be used to produce TUF metadata offline, and then uploaded/
 			This is used to create a new delegated role for your TUF Metadata.
 ========================================================================================================================
 
-In the event that metadata needs to be updated to accomodate a change in the appropriate channel(delegated role), the following instructions should be followed:
+**CHANGING TARGET FILE METADATA**
+
+	In the event that metadata needs to be updated to accomodate a change in the appropriate channel(delegated role), the following instructions should be followed:
 
 	1. All of the files in the Target File Modification Folder should be in the same directory as the configuration files and other scripts.
 	2. Set up the configuration file:
