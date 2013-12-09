@@ -19,16 +19,16 @@ for line in filey:
 	liss = line.split('=',1)
 	if liss[0] == "PATHTODIRECTORY":
 		abspath = liss[1].strip()
+		
 	elif liss[0] == "PATHTOTARGETS":
 		filled = liss[1].strip()
+		
 	elif liss[0] == "REPO":
 		repo = liss[1].strip()
-
 		
 filey.close()	
 
 #GET ALL PATHS 
-
 keys = "python "+abspath+"generateKeystore.py "+abspath+"keyconfig.txt"
 makeRepo = "python "+abspath+"generateRepositoryLocal.py "+abspath+"repoconfig.txt"
 addTarg = "python "+abspath+"addtargs.py "+abspath+"targetconfig.txt"

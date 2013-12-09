@@ -1,5 +1,5 @@
-CHANNEL=beta
-CHANNELKEYPASSWORD=beta^gogreen
+CHANNEL=stable
+CHANNELKEYPASSWORD=stable%gogreen
 PATHTODIRECTORY=/Users/Ceeze/Desktop/
 PATHTOTARGETS=/Users/Ceeze/Desktop/moo
 REPO=/Users/Ceeze/Desktop/tuf/

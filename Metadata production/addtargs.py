@@ -9,7 +9,7 @@ USAGE: run python addtargs.py path/to/targetsconfig.txt
 from tuf.libtuf import *
 import os 
 
-repoName,rkeystore,keystore = '','',''
+repoName,rkeystore,keystore, updatePath = '','','',''
 rootpwd,targetspwd,releasepwd,timestamppwd = '','','',''
 del1pwd,del2pwd,del3pwd = '','',''
 
@@ -31,6 +31,9 @@ for line in filey:
 			
 	elif liss[0] == "ROOTPASSWORD":
 		rootpwd = liss[1].strip()
+	
+	elif liss[0] == "TARGETSTRUCTURE":
+		updatePath = liss[1].strip()
 		
 	elif liss[0] == "TARGETPASSWORD":
 		targetspwd = liss[1].strip()
@@ -49,18 +52,16 @@ for line in filey:
 		
 	elif liss[0] == "NIGHTLYPASSWORD":
 		del3pwd = liss[1].strip()
+		
 filey.close()
 
-##ADD TARGET FILES
-'''Make sure the target files are saved in the targets directory of the repository'''
+#ADD TARGET FILES
 repository = load_repository(repoName)
 
 #Get list of file all file paths
-tList = repository.get_filepaths_in_directory(repoName+"targets", recursive_walk=True, followlinks=True)
-
-#Add List of target files to the targets metadata
-#for targ in tList:
-	#repository.targets.add_target(targ)
+sList = repository.get_filepaths_in_directory(repoName+updatePath+"stable", recursive_walk=True, followlinks=True)
+bList = repository.get_filepaths_in_directory(repoName+updatePath+"beta", recursive_walk=True, followlinks=True)
+nList = repository.get_filepaths_in_directory(repoName+updatePath+"nightly", recursive_walk=True, followlinks=True)
 
 #IMPORT DELEGATES' PUBLIC KEYS
 public_del1_key = import_rsa_publickey_from_file(keystore+"stable.pub")
@@ -77,13 +78,13 @@ private_release_key = import_rsa_privatekey_from_file(keystore+"release",passwor
 private_targets_key = import_rsa_privatekey_from_file(keystore+"targets",password=targetspwd)
 
 #DELEGATE
-repository.targets.delegate("stable",[public_del1_key], tList)
+repository.targets.delegate("stable",[public_del1_key], sList)
 repository.targets.stable.version = repository.targets.version+1
 
-repository.targets.delegate("beta",[public_del2_key], tList)
+repository.targets.delegate("beta",[public_del2_key], bList)
 repository.targets.beta.version = repository.targets.version+1
 
-repository.targets.delegate("nightly",[public_del3_key], tList)
+repository.targets.delegate("nightly",[public_del3_key], nList)
 repository.targets.nightly.version = repository.targets.version+1
 
 #LOAD SIGNING KEYS
@@ -95,7 +96,5 @@ repository.targets.load_signing_key(private_targets_key)
 repository.timestamp.load_signing_key(private_timestamp_key)
 repository.release.load_signing_key(private_release_key)
 
-
 #NEW VERSIONS OF METADATA
-
 repository.write()

@@ -1,3 +1,16 @@
+TUF Metadata for Tails has been created with three delegated roles in mind.
+
+	I. STABLE
+	II. BETA
+	III. NIGHTLY
+
+The stable channel is currently the only one being implemented in Tails, so our focus is on that. We have still implemented the other two delegated roles in anticipation of future efforts.
+
+
+The three channels represent different methods to download updates, specifically differing in the amount of time in between each update. Stable, beta, and nightly is the order of these channels, with stable having the least frequent updates, and nightly the most.
+
+
+
 There are two ways of creating metadata for TUF included in these instructions.
 		
 		I. Automatically
@@ -17,7 +30,8 @@ There are two ways of creating metadata for TUF included in these instructions.
 	Source: https://docs.google.com/document/d/1n-4G8cfuGMCBwXDgkj52DuBhRG5Di6YW9p8IaH-fIxc/edit?pli=1#
 ========================================================================================================================	
 	1. Download all files into a folder of your choosing
-		**After downloading, place all files in the Config Files folder, in the same folder as the scripts.
+		**After downloading, place all files in the Config Files folder and Target File Modification folder in the same folder as all the other scripts.**
+		HAVE ALL SCRIPTS AND CONFIG.TXT FILES IN THE SAME PLACE
 	2. Open all config.txt files
 		-setupconfig.txt
 		-keyconfig.txt
@@ -28,9 +42,7 @@ There are two ways of creating metadata for TUF included in these instructions.
 		SETUPCONFIG.TXT:
 			PATHTODIRECTORY
 			PATHTOTARGETS
-			REPO
-			OLDREPO
-			LIVEREPO	
+			REPO	
 			-Change PATHTODIRECTORY: To your current directory where this folder is.
 						Make sure all of the included files are present.
 						**WILL NOT WORK IF THE CONFIG FILES ARE NOT IN THE SAME DIRECTORY AS THE SCRIPTS**
@@ -122,6 +134,34 @@ These Scripts are to be used to produce TUF metadata offline, and then uploaded/
 			python addDelegation.py path/to/delconfig.txt
 			This is used to create a new delegated role for your TUF Metadata.
 ========================================================================================================================
+
+In the event that metadata needs to be updated to accomodate a change in the appropriate channel(delegated role), the following instructions should be followed:
+
+	1. All of the files in the Target File Modification Folder should be in the same directory as the configuration files and other scripts.
+	2. Set up the configuration file:
+		SWAPCONFIG.TXT:
+			CHANNEL: The delegated role which you wish to modify targets for: stable, beta, or nightly.
+			CHANNELKEYPASSWORD: Password for the delegated role.
+			PATHTODIRECTORY: Path to the current working directory which includes all of the scipts & configuration files. EX: /Users/name/Desktop/
+			Include the / at the end.
+			PATHTOTARGETS: Path to directory where the new files are located. EX: /Users/name/Desktop/newtargs
+			REPO: Path to your TUF repository. EX: path/to/repository/ Include the / at the end.
+			TARGETSTRUCTURE: Path to the new structure: EX: targets/update/v1/Tails/0.22/i386/ follow this structure. Start with targets/ and end with a / after build.
+		SWAPTARGETCONFIG.TXT:
+			REPONAME: Same as in targetconfig.txt.
+			ROOTKEYSTORE: Same as in targetconfig.txt.
+			KEYSTORE: Same as in targetconfig.txt.
+			TARGETSTRUCTURE: Must be same as in SWAPCONFIG.TXT  EX: targets/update/v1/Tails/0.22/i386/
+			ROOTPASSWORD: Same as in targetconfig.txt.
+			TARGETPASSWORD: Same as in targetconfig.txt.
+			RELEASEPASSWORD:Same as in targetconfig.txt.
+			TIMESTAMPPASSWORD: Same as in targetconfig.txt.
+		This will automatically be utilized in the editTargs.py script. Make sure it is configured correctly.
+	3. Run editTargs.py
+		python editTargs.py path/to/swapconfig.txt
+		This will effectively add new target files to the TUF metadata for the specified channel you inputed. This script calls removeTarg.py and the script to add target files to whatever channel (delegated role) you picked. 
+========================================================================================================================
+
 
 Our TUF Metadata is relatively small and efficient. It contains our updates.yml (Update Description File) as a target, as well as the
 Target files (either IUK, or full ISO) and the URL's from where they can be downloaded. 
