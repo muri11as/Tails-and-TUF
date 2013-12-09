@@ -69,6 +69,7 @@ There are two ways of creating metadata for TUF included in these instructions.
 			REPONAME: Path to your repository, same as in repoconfig.txt.
 			ROOTKEYSTORE: Path to where your rootkey is stored EX: /users/name/Desktop/rootkeys/rootkey
 			KEYSTORE: Path to where your non rootkeys are stored, same as in repoconfig.txt && keyconfig.txt.
+			TARGETSTRUCTURE: Path to your update structure, starting with targets/ EX: targets/update/v1/Tails/0.21/i386/
 			ROOTPASSWORD: same as in repoconfig.txt && keyconfig.txt.
 			TARGETPASSWORD: Same as in repoconfig.txt && keyconfig.txt.
 			RELEASEPASSWORD: Same as in repoconfig.txt && keyconfig.txt.
