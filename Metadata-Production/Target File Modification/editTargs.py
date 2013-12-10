@@ -41,23 +41,25 @@ filey.close()
 try:
 	if channel == "stable":
 		addscript = "addtoStable.py "
+		rmscript = "clearStable.py"
 		
 	elif channel == "beta":
 		addscript = "addtoBeta.py "
+		rmscript = "clearBeta.py"
 		
 	elif channel == "nightly":
 		addscript = "addtoNightly.py "
+		rmscript = "clearNightly.py"
+		
 except:
 	print "Not a valid channel!"
 	sys.exit(1)
 
-rmscript = "removeTarg.py "
-
 #GET ALL PATHS 
-rm = "rm -r "+repo+updatePath+channel+"/"
-mk = "mkdir "+repo+updatePath+channel+"/"
-fillTargs= "cp -r "+filled+" "+repo+"targets/update/"
-rmTarg = "python "+abspath+rmscript+abspath+"swaptargetconfig.txt "+channel
+rm = "rm -r "+repo+"targets/"+channel+"/"
+mk = "mkdir "+repo+"targets/"+channel+"/"
+fillTargs= "cp -r "+filled+" "+repo+"targets/"+channel
+rmTarg = "python "+abspath+rmscript+abspath+"swaptargetconfig.txt "+channel+" "+rolepwd
 addTarg = "python "+abspath+addscript+abspath+"swaptargetconfig.txt "+channel+" "+rolepwd
 goLive = "cp -r "+repo+"metadata.staged "+repo+"metadata"
 
@@ -65,6 +67,6 @@ goLive = "cp -r "+repo+"metadata.staged "+repo+"metadata"
 subprocess.call(rmTarg, shell=True)
 subprocess.call(rm,shell=True)
 subprocess.call(mk,shell=True)
-subprocess.call(fillTargs, shell=True)
-subprocess.call(addTarg, shell=True)
-subprocess.call(goLive,shell=True)
+#subprocess.call(fillTargs, shell=True)
+#subprocess.call(addTarg, shell=True)
+#subprocess.call(goLive,shell=True)

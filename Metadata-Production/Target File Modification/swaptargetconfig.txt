@@ -1,6 +1,7 @@
-CHANNEL=stable
-CHANNELKEYPASSWORD=stable%gogreen
-PATHTODIRECTORY=/Users/Ceeze/Desktop/
-PATHTOTARGETS=/Users/Ceeze/Desktop/v1
-REPO=/Users/Ceeze/Desktop/tuf/
-TARGETSTRUCTURE=targets/update/v1/Tails/0.22/i386/
+REPONAME=/Users/Ceeze/Desktop/tuf/
+ROOTKEYSTORE=/Users/Ceeze/Desktop/rootkeys/root_key/
+KEYSTORE=/Users/Ceeze/Desktop/keys/
+ROOTPASSWORD=root@gogreen
+TARGETPASSWORD=target!gogreen
+RELEASEPASSWORD=release#gogreen
+TIMESTAMPPASSWORD=time$gogreen

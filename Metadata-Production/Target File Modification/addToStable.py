@@ -1,15 +1,15 @@
 '''
 
 AUTHOR: CESAR MURILLAS
-DESCRIPTION: THIS SCRIPT WILL ADD TARGET FILES TO TARGETS ROLE METADATA
-USAGE: run python addToStable.py path/to/swaptargetconfig.txt channel channelpassword
+DESCRIPTION: THIS SCRIPT WILL ADD TARGET FILES TO DELEGATED ROLE STABLE METADATA
+USAGE: run python addToStable.py path/to/targetsconfig.txt channel channelpwd
 
 '''
 
 from tuf.libtuf import *
 import os 
 
-repoName,rkeystore,keystore, updatePath = '','','',''
+repoName,rkeystore,keystore = '','',''
 rootpwd,targetspwd,releasepwd,timestamppwd = '','','',''
 
 try:
@@ -30,9 +30,6 @@ for line in filey:
 			
 	elif liss[0] == "ROOTPASSWORD":
 		rootpwd = liss[1].strip()
-	
-	elif liss[0] == "TARGETSTRUCTURE":
-		updatePath = liss[1].strip()
 		
 	elif liss[0] == "TARGETPASSWORD":
 		targetspwd = liss[1].strip()
@@ -47,24 +44,23 @@ filey.close()
 
 #ADD TARGET FILES
 channel = sys.argv[2]
-del1pwd = sys.argv[3]
+channelpwd= sys.argv[3]
 repository = load_repository(repoName)
 
 #GET LIST OF ALL TARGET FILES
-sList = repository.get_filepaths_in_directory(repoName+updatePath+channel, recursive_walk=True, followlinks=True)
-
+sList = repository.get_filepaths_in_directory(repoName+"targets/stable", recursive_walk=True, followlinks=True)
 #IMPORT DELEGATE PUBLIC KEY
 public_del1_key = import_rsa_publickey_from_file(keystore+channel+".pub")
 
 #IMPORT SIGNING KEYS
-private_del1_key = import_rsa_privatekey_from_file(keystore+channel,password=del1pwd)
+private_del1_key = import_rsa_privatekey_from_file(keystore+channel,password=channelpwd)
 private_root_key = import_rsa_privatekey_from_file(rkeystore+"root_key",password=rootpwd)
 private_timestamp_key = import_rsa_privatekey_from_file(keystore+"timestamp",password=timestamppwd)
 private_release_key = import_rsa_privatekey_from_file(keystore+"release",password=releasepwd)
 private_targets_key = import_rsa_privatekey_from_file(keystore+"targets",password=targetspwd)
 
 #ADD DELEGATE
-repository.targets.delegate(channel,[public_del1_key], sList)
+repository.targets.stable.add_targets(sList)
 repository.targets.stable.version = repository.targets.version+1
 
 #LOAD SIGNING KEYS

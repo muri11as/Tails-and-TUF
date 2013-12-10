@@ -1,8 +1,8 @@
 '''
 
 AUTHOR: CESAR MURILLAS
-DESCRIPTION: THIS SCRIPT WILL ADD TARGET FILES TO TARGETS ROLE METADATA
-USAGE: run python addToBeta.py path/to/swaptargetconfig.txt channel channelpassword
+DESCRIPTION: THIS SCRIPT WILL ADD TARGET FILES TO DELEGATED ROLE BETA METADATA
+USAGE: run python addToBeta.py path/to/targetsconfig.txt channel channelpwd
 
 '''
 
@@ -47,28 +47,27 @@ filey.close()
 
 #ADD TARGET FILES
 channel = sys.argv[2]
-del1pwd = sys.argv[3]
+channelpwd= sys.argv[3]
 repository = load_repository(repoName)
 
 #GET LIST OF ALL TARGET FILES
-sList = repository.get_filepaths_in_directory(repoName+updatePath+channel, recursive_walk=True, followlinks=True)
-
+sList = repository.get_filepaths_in_directory(repoName+"targets/beta", recursive_walk=True, followlinks=True)
 #IMPORT DELEGATE PUBLIC KEY
 public_del1_key = import_rsa_publickey_from_file(keystore+channel+".pub")
 
 #IMPORT SIGNING KEYS
-private_del1_key = import_rsa_privatekey_from_file(keystore+channel,password=del1pwd)
+private_del1_key = import_rsa_privatekey_from_file(keystore+channel,password=channelpwd)
 private_root_key = import_rsa_privatekey_from_file(rkeystore+"root_key",password=rootpwd)
 private_timestamp_key = import_rsa_privatekey_from_file(keystore+"timestamp",password=timestamppwd)
 private_release_key = import_rsa_privatekey_from_file(keystore+"release",password=releasepwd)
 private_targets_key = import_rsa_privatekey_from_file(keystore+"targets",password=targetspwd)
 
 #ADD DELEGATE
-repository.targets.delegate(channel,[public_del1_key], sList)
+repository.targets.beta.add_targets(sList)
 repository.targets.beta.version = repository.targets.version+1
 
 #LOAD SIGNING KEYS
-repository.targets.beta.load_signing_key(private_del1_key)
+repository.targets.stable.load_signing_key(private_del1_key)
 repository.root.load_signing_key(private_root_key)
 repository.targets.load_signing_key(private_targets_key)
 repository.timestamp.load_signing_key(private_timestamp_key)

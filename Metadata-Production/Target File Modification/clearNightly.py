@@ -2,7 +2,7 @@
 
 AUTHOR: CESAR MURILLAS
 DESCRIPTION: THIS SCRIPT WILL REMOVE TARGETS ROLE METADATA TO MAKE ROOM FOR NEW
-USAGE: run python removeTargs.py path/to/targetconfig.txt
+USAGE: run python clearNightly.py path/to/swaptargetconfig.txt channel channelpwd
 
 '''
 
@@ -41,20 +41,22 @@ for line in filey:
 		timestamppwd = liss[1].strip()
 		
 filey.close()
+channelpwd = sys.argv[3]
 channel = sys.argv[2]
 repository = load_repository(repoName)
 
 #REMOVE ALL TARGETS
-repository.targets.revoke(channel)
-
+repository.targets.nightly.clear_targets()
 
 #IMPORT SIGNING KEYS
+private_del_key = import_rsa_privatekey_from_file(keystore+channel,password=channelpwd)
 private_root_key = import_rsa_privatekey_from_file(rkeystore+"root_key",password=rootpwd)
 private_timestamp_key = import_rsa_privatekey_from_file(keystore+"timestamp",password=timestamppwd)
 private_release_key = import_rsa_privatekey_from_file(keystore+"release",password=releasepwd)
 private_targets_key = import_rsa_privatekey_from_file(keystore+"targets",password=targetspwd)
 
 #LOAD SIGNING KEYS
+repository.targets.nightly.load_signing_key(private_del_key)
 repository.root.load_signing_key(private_root_key)
 repository.targets.load_signing_key(private_targets_key)
 repository.timestamp.load_signing_key(private_timestamp_key)
