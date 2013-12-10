@@ -1,3 +1,9 @@
+
+**GENERATING TUF METADATA FOR TAILS**
+========================================================================================================================
+========================================================================================================================
+**INTRODUCTION**
+
 TUF Metadata for Tails has been created with three delegated roles in mind.
 
 	I. STABLE
@@ -13,15 +19,21 @@ TUF Metadata for Tails has been created with three delegated roles in mind.
 	frequent updates, and nightly the most.
 	
 ========================================================================================================================	
+**INDEX**
 
-
-There are two ways of creating metadata for TUF included in these instructions.
+	To generate TUF Metadata for the first time for Tails see the Automatically Section.
+	To utilize a specific script by itself, or modify metadata after initial creation, see Manually Section
+	To change Target files and TUF metadata for the specific targets/delegation refer to the
+	Changing Target File Metadata section at the bottom of this page.	
 		
 		I. Automatically.
 		II. Manually.
+		III. Changing Target File Metadata.
 		
-		To change target file metadata refer to the bottom.		
+========================================================================================================================
 
+
+========================================================================================================================
 **AUTOMATICALLY**
 	
 	This section guides you in how to generate TUF metadata for Tails, for the first time:
