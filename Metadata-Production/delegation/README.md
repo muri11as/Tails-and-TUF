@@ -1,3 +1,5 @@
+### The files in this directory are deprecated.
+
 These Scripts are to be used to produce TUF metadata offline, and then uploaded/copied to the TUF server.
 
 To generate a new Repository:
