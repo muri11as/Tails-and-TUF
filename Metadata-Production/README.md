@@ -36,7 +36,7 @@ Inside the Config Files (or current if did step 4 first) directory, open the fol
 * [repoconfig.txt](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations#repoconfigtxt)
 * [targetconfig.txt](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations#targetconfigtxt)
 
-You may do step 4 first, then move on to this step if you do not want to keep a fresh copy of the configuration files.  The configuration files should be self explanatory, however, more details on each configuration file and its associated variables is available in the wiki.
+You may do step 4 first, then move on to this step if you do not want to keep a fresh copy of the configuration files.  The configuration files should be self explanatory, however, more details on each configuration file and its associated variables is available in the wiki.  The folders you specify must already be created in order to work.
 
 ###4. Copy the configuration files to the Metadata-Production directory
 
