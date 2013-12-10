@@ -43,7 +43,7 @@ You may do step 4 first, then move on to this step if you do not want to keep a 
 This will copy all the configuration files in the Config Files directory to the Metadata-Production directory (one level up)
 
 ```shell
-sh copyfiles.sh
+sh copyFiles.sh
 ```
 
 ###5. Run the setup
