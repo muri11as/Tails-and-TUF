@@ -1,9 +1,0 @@
-REPONAME=/Users/Ceeze/Desktop/tuf
-KEYSTORE=/Users/Ceeze/Desktop/keys
-TARGETPASSWORD=target!gogreen
-RELEASEPASSWORD=release#gorged
-TIMESTAMPPASSWORD=time$gogreen
-STABLEPASSWORD=stable!gogreen
-BETAPASSWORD=beta#gogreen
-NIGHTLYPASSWORD=nightly$gogreen
-VERSIONUPDATE=1
