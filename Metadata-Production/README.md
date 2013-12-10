@@ -9,7 +9,7 @@ This guide will walk you through on how to generate metadata for your repository
 ## Generating Metadata for the First time	
 ###1. Download the TUF Repository Tools
 
-To create a new repository, you will need to generate all the initial metadata files.  Enter the following shell commands to download the TUF Repository Tools.
+To create a new repository, you will need to generate all the initial metadata files.  Enter the following shell commands to download the TUF Repository Tools.  You will need to have pip and virtualenv installed to install and run the repo tools.
 
 ```shell
 virtualenv --no-site-packages (Pick a name)
