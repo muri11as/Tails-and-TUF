@@ -37,8 +37,8 @@ There are two ways of creating metadata for TUF included in these instructions.
 	
 	Source: https://docs.google.com/document/d/1n-4G8cfuGMCBwXDgkj52DuBhRG5Di6YW9p8IaH-fIxc/edit?pli=1#
 ========================================================================================================================	
-	1. Download all files into a folder of your choosing
-		**After downloading, place all files in the Config Files folder and Target File Modification folder in the same folder as all the other scripts.**
+	1. After you clone this repository, navigate to Metadata-Production folder:
+		**After downloading, place all files in the Config Files folder and Target File Modification folder in the same folder as all the other scripts.** (Move them up a directory)
 		HAVE ALL SCRIPTS AND CONFIG.TXT FILES IN THE SAME PLACE
 	2. Open all config.txt files
 		-setupconfig.txt

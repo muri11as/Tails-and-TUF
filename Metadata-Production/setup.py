@@ -30,7 +30,7 @@ filey.close()
 
 #GET ALL PATHS 
 keys = "python "+abspath+"generateKeystore.py "+abspath+"keyconfig.txt"
-makeRepo = "python "+abspath+"generateRepositoryLocal.py "+abspath+"repoconfig.txt"
+makeRepo = "python "+abspath+"generateMetadata.py "+abspath+"repoconfig.txt"
 addTarg = "python "+abspath+"addtargs.py "+abspath+"targetconfig.txt"
 fillTargs= "cp -r "+filled+" "+repo
 goLive = "cp -r "+repo+"metadata.staged "+repo+"metadata"
