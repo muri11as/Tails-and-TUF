@@ -114,37 +114,24 @@ This is used to create a new delegated role for your TUF Metadata.
 python addDelegation.py path/to/delconfig.txt
 ```
 
-## Modify Existing Repository Inside Delegated Metadata
+### Adding Files
 
-In the event that metadata needs to be updated to accomodate a change in the appropriate channel(delegated role), the following instructions should be followed:
+The metadata needs to be updated in the event a new file is added.  You will need to regenerate the metadata file when this happens.
 
-### 1. Files in the Target File Modification Folder should be in the same directory as the configuration files and other scripts.
+### 1. Navigate to the Target File Modification directory and modify swapconfig.txt and swaptargetconfig.txt.
 
-	1. All of the files in the Target File Modification Folder should be in the same directory as the configuration files and other scripts.
-	2. Set up the two configuration files:
-		SWAPCONFIG.TXT:
-			CHANNEL: The delegated role which you wish to modify targets for: stable, beta, or nightly.
-			CHANNELKEYPASSWORD: Password for the delegated role.
-			PATHTODIRECTORY: Path to the current working directory which includes all of the scipts & configuration files. EX: /Users/name/Desktop/
-			Include the / at the end.
-			PATHTOTARGETS: Path to directory where the new files are located. EX: /Users/name/Desktop/newtargs
-			REPO: Path to your TUF repository. EX: path/to/repository/ Include the / at the end.
-			TARGETSTRUCTURE: Path to the new structure: EX: targets/update/v1/Tails/0.22/i386/ follow this structure. Start with targets/ and end with a / after build.
-		SWAPTARGETCONFIG.TXT:
-			REPONAME: Same as in targetconfig.txt.
-			ROOTKEYSTORE: Same as in targetconfig.txt.
-			KEYSTORE: Same as in targetconfig.txt.
-			TARGETSTRUCTURE: Must be same as in SWAPCONFIG.TXT  EX: targets/update/v1/Tails/0.22/i386/
-			ROOTPASSWORD: Same as in targetconfig.txt.
-			TARGETPASSWORD: Same as in targetconfig.txt.
-			RELEASEPASSWORD:Same as in targetconfig.txt.
-			TIMESTAMPPASSWORD: Same as in targetconfig.txt.
-		This will automatically be utilized in the editTargs.py script. Make sure it is configured correctly.
-	3. Run editTargs.py
-		python editTargs.py path/to/swapconfig.txt
-		This will effectively add new target files to the TUF metadata for the specified channel you inputed. This script calls removeTarg.py and the script to add target files to whatever channel (delegated role) you picked. 
-========================================================================================================================
+You will need to modify the delconfig.txt file according to your setup.  The option to specify the specific delegation/channel is available in the configuration files.  More details on them can be found on the wiki.
 
+### 2. Generate the new metadata for the new target files
 
-Our TUF Metadata is relatively small and efficient. It contains our updates.yml (Update Description File) as a target, as well as the
+This will effectively add new target files to the TUF metadata for the specified channel you inputed. This script calls removeTarg.py and the script to add target files to whatever channel (delegated role) you picked.
+
+```shell
+python editTargs.py path/to/swapconfig.txt
+```
+
+======
+
+Notes:
+TUF Metadata is relatively small and efficient. It contains our updates.yml (Update Description File) as a target, as well as the
 Target files (either IUK, or full ISO) and the URL's from where they can be downloaded. 
