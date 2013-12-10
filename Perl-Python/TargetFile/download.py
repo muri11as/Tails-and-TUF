@@ -1,9 +1,9 @@
 '''
 Author: Toan Nguyen
 Date: Nov 18, 2013
-Description: This file will be called by the UpdateDescriptionFile/Download.pm
-to actually download the updates.yml from update server then the return
-file will be piped into Download.pm
+Description: This file will be called by the TargetFile/Download.pm
+to actually download the *.iuk or *.iso from update server then downloaded
+file will be piped into TargetFile/Download.pm
 '''
 
 import tuf.interposition
