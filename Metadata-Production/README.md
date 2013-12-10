@@ -63,6 +63,7 @@ python setup.py setupconfig.txt
 When you have already generated a repository, you will need to update it whenever there is a new release.  The following will walk you through on how to modify an existing repository's metadata depending on what you wish to do.  Again, all configuration files should be stored on the current directory, but configuration files stored elsewhere are also supported as long as you specify the correct path.
 
 ### Generate a new key
+-------
 
 #### 1. Modify the keyconfig.txt file
 
@@ -75,6 +76,7 @@ python generateKeystore.py path/to/keyconfig.txt
 ```
 
 ### Generate a new repository
+-------
 
 #### 1. Modify the repoconfig.txt file
 
@@ -87,6 +89,7 @@ python generateMetadata.py path/to/repoconfig.txt
 ```
 
 ### Copy the repository to a "live" folder
+-------
 
 #### 1. Modify the copyconfig.txt file
 
@@ -101,6 +104,7 @@ python copyToRepository.py path/to/copyconfig.txt
 ```
 
 ### Create a delegation
+-------
 
 #### 1. Modify the delconfig.txt file
 
@@ -115,6 +119,7 @@ python addDelegation.py path/to/delconfig.txt
 ```
 
 ### Adding Files
+-------
 
 The metadata needs to be updated in the event a new file is added.  You will need to regenerate the metadata file when this happens.
 
