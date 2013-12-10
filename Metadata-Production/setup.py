@@ -29,7 +29,7 @@ for line in filey:
 filey.close()	
 
 #CREATE ALL COMMANDS 
-keys = "python "+abspath+"generateKeystore.py "+abspath+"keyconfig.txt"
+keys = "python "+abspath+"generateKeyStore.py "+abspath+"keyconfig.txt"
 makeRepo = "python "+abspath+"generateMetadata.py "+abspath+"repoconfig.txt"
 rm = "rm -r "+repo+"targets/"
 addTarg = "python "+abspath+"addtargs.py "+abspath+"targetconfig.txt"
