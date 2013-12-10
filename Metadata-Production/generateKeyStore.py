@@ -61,3 +61,5 @@ generate_and_write_rsa_keypair(path+"targets",bits=3072,password=targetpwd)
 generate_and_write_rsa_keypair(path+"stable", bits=3072,password=del1pwd)
 generate_and_write_rsa_keypair(path+"beta", bits=3072,password=del2pwd)
 generate_and_write_rsa_keypair(path+"nightly", bits=3072,password=del3pwd)
+
+print "Key Generation Completed..."

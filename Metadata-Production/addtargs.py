@@ -99,3 +99,4 @@ repository.release.load_signing_key(private_release_key)
 
 #NEW VERSIONS OF METADATA
 repository.write()
+print "Target File Addition && Delegation Completed..."

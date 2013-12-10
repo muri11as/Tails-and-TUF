@@ -95,3 +95,4 @@ repository.targets.load_signing_key(private_targets_key)
 repository.timestamp.expiration = tstampExp
 #WRITE OUT
 repository.write()
+print "TUF REPOSITORY GENERATION COMPLETED..."

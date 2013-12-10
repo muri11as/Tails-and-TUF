@@ -42,3 +42,4 @@ subprocess.call(rm,shell=True)
 subprocess.call(fillTargs, shell=True)
 subprocess.call(addTarg, shell=True)
 subprocess.call(goLive,shell=True)
+print "SETUP COMPLETE.."
