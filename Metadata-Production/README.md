@@ -9,8 +9,7 @@ TUF Metadata for Tails has been created with three delegated roles in mind.
 The stable channel is currently the only one being implemented in Tails, so we have placed our focus on that channel.
 We have, however, implemented the other two delegated roles in anticipation of these future channels.
 
-## First time Metadata Generation
-	
+## Generating Metadata for the First time	
 ###1. Download the TUF Repository Tools
 
 To create a new repository, you will need to generate all the initial metadata files.  Enter the following shell commands to download the TUF Repository Tools.
@@ -121,15 +120,15 @@ python addDelegation.py path/to/delconfig.txt
 ### Adding Files
 -------
 
-The metadata needs to be updated in the event a new file is added.  You will need to regenerate the metadata file when this happens.
+When metadata needs to be updated in the event a new file is added.  You will need to regenerate the metadata file when this happens. The automated script editTargs.py takes care of this for you.
 
 ### 1. Navigate to the Target File Modification directory and modify swapconfig.txt and swaptargetconfig.txt.
 
-You will need to modify the delconfig.txt file according to your setup.  The option to specify the specific delegation/channel is available in the configuration files.  More details on them can be found on the wiki.
+The option to specify the specific delegation/channel is available in the configuration files.  More details on them can be found on the wiki.
 
 ### 2. Generate the new metadata for the new target files
 
-This will effectively add new target files to the TUF metadata for the specified channel you inputed. This script calls removeTarg.py and the script to add target files to whatever channel (delegated role) you picked.
+This will effectively add new target files to the TUF metadata for the specified channel you inputed. This script calls clearTarg.py the script to clear the role of its current targets and addToRole.py which is the script to add target files to whatever channel (delegated role) you picked.
 
 ```shell
 python editTargs.py path/to/swapconfig.txt
