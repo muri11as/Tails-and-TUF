@@ -34,10 +34,10 @@ git clone https://github.com/muri11as/Tails-and-TUF
 
 Inside the Config Files (or current if did step 4 first) directory, open the following configuration files, and make the changes according to your environment.
 
-* setupconfig.txt
-* keyconfig.txt
-* repoconfig.txt
-* targetconfig.txt
+* [setupconfig.txt](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations#setupconfigtxt)
+* [keyconfig.txt](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations#keyconfigtxt)
+* [repoconfig.txt](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations#repoconfigtxt)
+* [targetconfig.txt](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations#targetconfigtxt)
 
 You may do step 4 first, then move on to this step if you do not want to keep a fresh copy of the configuration files.  The configuration files should be self explanatory, however, more details on each configuration file and its associated variables is available in the wiki.
 
@@ -51,7 +51,7 @@ sh copyfiles.sh
 
 ###5. Run the setup
 
-In a terminal run the following command to begin generating the initial metadata for your TUF repository.  The metadata will be generated in the location specified in the setupconfig.txt.  If for any reason your configuration files is stored elsewhere, be sure to change setupconfig.txt to whereever it is stored in.
+In a terminal run the following command to begin generating the initial metadata for your TUF repository.  The metadata will be generated in the location specified in the [setupconfig.txt](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations#setupconfigtxt).  If for any reason your configuration files is stored elsewhere, be sure to change [setupconfig.txt](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations#setupconfigtxt) to whereever it is stored in.
 
 ```shell
 python setup.py setupconfig.txt
@@ -66,7 +66,7 @@ When you have already generated a repository, you will need to update it wheneve
 
 #### 1. Modify the keyconfig.txt file
 
-If you did steps 3/4 above, you will need to modify the keyconfig.txt file according to your setup.  More details can be found on the wiki.
+If you did steps 3/4 above, you will need to modify the [keyconfig.txt](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations#keyconfigtxt) file according to your setup.  More details can be found on the wiki.
 
 #### 2. Generate the key.
 
@@ -79,7 +79,7 @@ python generateKeystore.py path/to/keyconfig.txt
 
 #### 1. Modify the repoconfig.txt file
 
-If you did steps 3/4 above, you will need to modify the repoconfig.txt file according to your setup.  More details can be found on the wiki.  The repoconfig.txt will require you to enter a root key.  Remember to store your Root Private Key(s) OFFLINE.
+If you did steps 3/4 above, you will need to modify the [repoconfig.txt](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations#repoconfigtxt) file according to your setup.  More details can be found on the wiki.  The [repoconfig.txt](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations#repoconfigtxt) will require you to enter a root key.  Remember to store your Root Private Key(s) OFFLINE.
 
 #### 2. Generate the repository.
 
@@ -92,7 +92,7 @@ python generateMetadata.py path/to/repoconfig.txt
 
 #### 1. Modify the copyconfig.txt file
 
-If you did steps 3/4 above, you will need to modify the copyconfig.txt file according to your setup.  More details can be found on the wiki.
+If you did steps 3/4 above, you will need to modify the [copyconfig.txt](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations#copyconfigtxt) file according to your setup.  More details can be found on the wiki.
 
 #### 2. Copy the repository.
 
@@ -107,7 +107,7 @@ python copyToRepository.py path/to/copyconfig.txt
 
 #### 1. Modify the delconfig.txt file
 
-If you did steps 3/4 above, you will need to modify the delconfig.txt file according to your setup.  More details can be found on the wiki.
+If you did steps 3/4 above, you will need to modify the [delconfig.txt](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations#delconfigtxt) file according to your setup.  More details can be found on the wiki.
 
 #### 2. Add a delegation repository.
 
@@ -122,7 +122,7 @@ python addDelegation.py path/to/delconfig.txt
 
 When metadata needs to be updated in the event a new file is added.  You will need to regenerate the metadata file when this happens. The automated script editTargs.py takes care of this for you.
 
-### 1. Navigate to the Target File Modification directory and modify swapconfig.txt and swaptargetconfig.txt.
+### 1. Navigate to the Target File Modification directory and modify [swapconfig.txt](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations#swapconfigtxt) and [swaptargetconfig.txt](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations#swaptargetconfigtxt).
 
 The option to specify the specific delegation/channel is available in the configuration files.  More details on them can be found on the wiki.
 
