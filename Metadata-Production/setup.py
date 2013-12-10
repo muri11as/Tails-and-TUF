@@ -28,15 +28,17 @@ for line in filey:
 		
 filey.close()	
 
-#GET ALL PATHS 
+#CREATE ALL COMMANDS 
 keys = "python "+abspath+"generateKeystore.py "+abspath+"keyconfig.txt"
 makeRepo = "python "+abspath+"generateMetadata.py "+abspath+"repoconfig.txt"
+rm = "rm -r "+repo+"targets/"
 addTarg = "python "+abspath+"addtargs.py "+abspath+"targetconfig.txt"
-fillTargs= "cp -r "+filled+" "+repo
+fillTargs= "cp -r "+filled+" "+repo+"targets/"
 goLive = "cp -r "+repo+"metadata.staged "+repo+"metadata"
 
 subprocess.call(keys, shell=True)
 subprocess.call(makeRepo, shell=True)
+subprocess.call(rm,shell=True)
 subprocess.call(fillTargs, shell=True)
 subprocess.call(addTarg, shell=True)
 subprocess.call(goLive,shell=True)

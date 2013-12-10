@@ -9,7 +9,7 @@ USAGE: run python addtargs.py path/to/targetsconfig.txt
 from tuf.libtuf import *
 import os 
 
-repoName,rkeystore,keystore, updatePath = '','','',''
+repoName,rkeystore,keystore = '','',''
 rootpwd,targetspwd,releasepwd,timestamppwd = '','','',''
 del1pwd,del2pwd,del3pwd = '','',''
 
@@ -31,10 +31,7 @@ for line in filey:
 			
 	elif liss[0] == "ROOTPASSWORD":
 		rootpwd = liss[1].strip()
-	
-	elif liss[0] == "TARGETSTRUCTURE":
-		updatePath = liss[1].strip()
-		
+
 	elif liss[0] == "TARGETPASSWORD":
 		targetspwd = liss[1].strip()
 		

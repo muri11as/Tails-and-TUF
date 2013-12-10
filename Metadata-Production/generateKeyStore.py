@@ -9,9 +9,10 @@ Run: python generateKeyStore.py path/to/keyconfig.txt
 import sys
 from tuf.libtuf import *
 
-##PARSE CONFIG FILE FOR ROOTPATH, PATH AND PASSWORD
+##PARSE CONFIG FILE FOR ROOTPATH, PATH AND PASSWORDS
 rootpath,path = '',''
-rootpwd,targetpwd,releasepwd,timestamppwd = '','','',''
+rootpwd,targetpwd,releasepwd,timestamppwd ='','','',''
+del1pwd,del2pwd,del3pwd = '','',''
 
 try:
 	filey = open(sys.argv[1],'r')
@@ -39,13 +40,24 @@ for line in filey:
 	elif liss[0] == "TIMESTAMPPASSWORD":
 		timestamppwd = liss[1].strip()
 		
-filey.close()	 
+	elif liss[0] == "STABLEPASSWORD":
+		del1pwd = liss[1].strip()
+		
+	elif liss[0] == "BETAPASSWORD":
+		del2pwd = liss[1].strip()
+		
+	elif liss[0] == "NIGHTLYPASSWORD":
+		del3pwd = liss[1].strip()
+		
+filey.close()	
+ 
 ##CREATE AND STORE ROOT RSA KEY PAIR
-
 generate_and_write_rsa_keypair(rootpath+"root_key",bits=3072,password=rootpwd)
 
-##CREATE AND STORE TIMESTAMP, RELEASE, && TARGETS PUBLIC && PRIVATE KEYS
-
+##CREATE AND STORE TIMESTAMP, RELEASE, TARGETS && ITS DELEGATES' PUBLIC && PRIVATE KEY PAIRS
 generate_and_write_rsa_keypair(path+"timestamp",bits=3072,password=timestamppwd)
 generate_and_write_rsa_keypair(path+"release",bits=3072,password=releasepwd)
 generate_and_write_rsa_keypair(path+"targets",bits=3072,password=targetpwd)
+generate_and_write_rsa_keypair(path+"stable", bits=3072,password=del1pwd)
+generate_and_write_rsa_keypair(path+"beta", bits=3072,password=del2pwd)
+generate_and_write_rsa_keypair(path+"nightly", bits=3072,password=del3pwd)
