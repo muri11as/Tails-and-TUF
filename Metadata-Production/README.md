@@ -17,12 +17,14 @@ TUF Metadata for Tails has been created with three delegated roles in mind.
 
 There are two ways of creating metadata for TUF included in these instructions.
 		
-		I. Automatically
+		I. Automatically.
 		II. Manually.
 		
 		To change target file metadata refer to the bottom.		
 
 **AUTOMATICALLY**
+	
+	This section guides you in how to generate TUF metadata for Tails, for the first time:
 	
 	TO RUN ALL SCRIPTS TO CREATE NEW METADATA AUTOMATICALLY
 	**WARNING** ALL CONFIGURATION FILES ARE DESIGNED WITH VARIABLE=YOURINPUT, DO NOT CHANGE FORMAT!!
@@ -102,7 +104,10 @@ There are two ways of creating metadata for TUF included in these instructions.
 
 INDIVIDUAL SCRIPT INSTRUCTIONS:
 
+This section is desgined in guiding you when you want to edit a piece of the repository and not generate a whole new one, you would use these scripts.
 These Scripts are to be used to produce TUF metadata offline, and then uploaded/copied to the TUF server.
+
+
 
 	To generate new keys:
 		Run generateKeyStore.py 
