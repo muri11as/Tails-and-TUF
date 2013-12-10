@@ -1,15 +1,15 @@
 '''
 
 AUTHOR: CESAR MURILLAS
-DESCRIPTION: THIS SCRIPT WILL ADD TARGET FILES TO DELEGATED ROLE BETA METADATA
-USAGE: run python addToBeta.py path/to/targetsconfig.txt channel channelpwd
+DESCRIPTION: THIS SCRIPT WILL ADD TARGET FILES TO DELEGATED ROLE METADATA OF SPECIFIED ROLE(CHANNEL)
+USAGE: run python addToNightly.py path/to/targetsconfig.txt channel channelpwd
 
 '''
 
 from tuf.libtuf import *
 import os 
 
-repoName,rkeystore,keystore, updatePath = '','','',''
+repoName,rkeystore,keystore= '','',''
 rootpwd,targetspwd,releasepwd,timestamppwd = '','','',''
 
 try:
@@ -30,9 +30,6 @@ for line in filey:
 			
 	elif liss[0] == "ROOTPASSWORD":
 		rootpwd = liss[1].strip()
-	
-	elif liss[0] == "TARGETSTRUCTURE":
-		updatePath = liss[1].strip()
 		
 	elif liss[0] == "TARGETPASSWORD":
 		targetspwd = liss[1].strip()
@@ -47,11 +44,19 @@ filey.close()
 
 #ADD TARGET FILES
 channel = sys.argv[2]
-channelpwd= sys.argv[3]
+channelpwd = sys.argv[3]
 repository = load_repository(repoName)
 
 #GET LIST OF ALL TARGET FILES
-sList = repository.get_filepaths_in_directory(repoName+"targets/beta", recursive_walk=True, followlinks=True)
+if channel == "stable":
+	tList = repository.get_filepaths_in_directory(repoName+"targets/nightly", recursive_walk=True, followlinks=True)
+	
+elif channel == "beta":
+	tList = repository.get_filepaths_in_directory(repoName+"targets/nightly", recursive_walk=True, followlinks=True)
+	
+elif channel == "nightly":
+	tList = repository.get_filepaths_in_directory(repoName+"targets/nightly", recursive_walk=True, followlinks=True)
+	
 #IMPORT DELEGATE PUBLIC KEY
 public_del1_key = import_rsa_publickey_from_file(keystore+channel+".pub")
 
@@ -62,9 +67,18 @@ private_timestamp_key = import_rsa_privatekey_from_file(keystore+"timestamp",pas
 private_release_key = import_rsa_privatekey_from_file(keystore+"release",password=releasepwd)
 private_targets_key = import_rsa_privatekey_from_file(keystore+"targets",password=targetspwd)
 
-#ADD DELEGATE
-repository.targets.beta.add_targets(sList)
-repository.targets.beta.version = repository.targets.version+1
+#ADD TARGETS TO DELEGATE
+if channel == "stable":
+	repository.targets.stable.add_targets(tList)
+	repository.targets.stable.version = repository.targets.version+1
+
+elif channel == "beta":
+	repository.targets.beta.add_targets(tList)
+	repository.targets.beta.version = repository.targets.version+1
+
+elif channel == "nightly":
+	repository.targets.nightly.add_targets(tList)
+	repository.targets.nightly.version = repository.targets.version+1
 
 #LOAD SIGNING KEYS
 repository.targets.stable.load_signing_key(private_del1_key)
