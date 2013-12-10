@@ -52,13 +52,14 @@ for line in filey:
 		
 filey.close()
 
-#ADD TARGET FILES
+##ADD TARGET FILES
+'''Make sure the target files are saved in the targets directory of the repository'''
 repository = load_repository(repoName)
 
 #Get list of file all file paths
-sList = repository.get_filepaths_in_directory(repoName+updatePath+"stable", recursive_walk=True, followlinks=True)
-bList = repository.get_filepaths_in_directory(repoName+updatePath+"beta", recursive_walk=True, followlinks=True)
-nList = repository.get_filepaths_in_directory(repoName+updatePath+"nightly", recursive_walk=True, followlinks=True)
+sList = repository.get_filepaths_in_directory(repoName+"targets/stable", recursive_walk=True, followlinks=True)
+bList = repository.get_filepaths_in_directory(repoName+"targets/beta", recursive_walk=True, followlinks=True)
+nList = repository.get_filepaths_in_directory(repoName+"targets/nightly", recursive_walk=True, followlinks=True)
 
 #IMPORT DELEGATES' PUBLIC KEYS
 public_del1_key = import_rsa_publickey_from_file(keystore+"stable.pub")
@@ -77,12 +78,15 @@ private_targets_key = import_rsa_privatekey_from_file(keystore+"targets",passwor
 #DELEGATE
 repository.targets.delegate("stable",[public_del1_key], sList)
 repository.targets.stable.version = repository.targets.version+1
+repository.targets.stable.expiration = "2014-06-20 12:00:00"
 
 repository.targets.delegate("beta",[public_del2_key], bList)
 repository.targets.beta.version = repository.targets.version+1
+repository.targets.beta.expiration = "2014-06-20 12:00:00"
 
 repository.targets.delegate("nightly",[public_del3_key], nList)
 repository.targets.nightly.version = repository.targets.version+1
+repository.targets.nightly.expiration = "2014-06-20 12:00:00"
 
 #LOAD SIGNING KEYS
 repository.targets.stable.load_signing_key(private_del1_key)
