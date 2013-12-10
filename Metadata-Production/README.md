@@ -33,7 +33,7 @@ git clone https://github.com/muri11as/Tails-and-TUF
 
 ###3. Edit the configuration files
 
-Inside the Config Files directory, open the following configuration files, and make the changes according to your environment.
+Inside the Config Files (or current if did step 4 first) directory, open the following configuration files, and make the changes according to your environment.
 
 * setupconfig.txt
 * keyconfig.txt
@@ -52,62 +52,73 @@ sh copyfiles.sh
 
 ###5. Run the setup
 
-In a terminal run the following command to begin generating the initial metadata for your TUF repository.  The metadata will be generated in the location specified in the setupconfig.txt
+In a terminal run the following command to begin generating the initial metadata for your TUF repository.  The metadata will be generated in the location specified in the setupconfig.txt.  If for any reason your configuration files is stored elsewhere, be sure to change setupconfig.txt to whereever it is stored in.
 
 ```shell
 python setup.py setupconfig.txt
 ```
 
+## Modify Existing Repository Metadata
 
-**MANUALLY**
+When you have already generated a repository, you will need to update it whenever there is a new release.  The following will walk you through on how to modify an existing repository's metadata depending on what you wish to do.  Again, all configuration files should be stored on the current directory, but configuration files stored elsewhere are also supported as long as you specify the correct path.
 
-INDIVIDUAL SCRIPT INSTRUCTIONS:
+### Generate a new key
 
-This section is desgined in guiding you when you want to edit a piece of the repository and not generate a whole new one, you would use these scripts.
-These Scripts are to be used to produce TUF metadata offline, and then uploaded/copied to the TUF server.
+#### 1. Modify the keyconfig.txt file
 
+If you did steps 3/4 above, you will need to modify the keyconfig.txt file according to your setup.  More details can be found on the wiki.
 
+#### 2. Generate the key.
 
-	To generate new keys:
-		Run generateKeyStore.py 
-			python generateKeystore.py path/to/keyconfig.txt
-		NOTE: Use Above instructions to setup your keyconfig.txt file.
-========================================================================================================================
-	To generate a new Repository:
-		Run generateMetadata.py
-			python generateMetadata.py path/to/repoconfig.txt
-		Remember to store your Root Private Key(s) somewhere OFFLINE.
-		NOTE: Use Above instructions to setup your repoconfig.txt file.
-========================================================================================================================  
-	To make a "Live" copy of your metadata after production is finished:
-		-Change copyconfig.txt 
-			COPYCONFIG.TXT:
-				PATHTO.STAGED: Where your metadata.staged folder is located.
-				PATHTOLIVE: Where you want your live metadata folder to go (server?).
-		Run copyToRepository.py
-			python copyToRepository.py path/to/copyconfig.txt
-    		This is used to create a final copy of your metadata and you can then upload to your TUF server.   		
-========================================================================================================================
-	To add a Delegation:
-		-Change delconfig.txt
-			DELCONFIG.TXT:
-				REPO: Where your repository is.
-				ROLENAME: What you want to name your new delegated role.
-				PATHTODELKEY: Path to where you want to save your new key for this role.
-				DELPASSWORD: Password for your new role.
-				ROOTKEYSTORE: Path to where your rootkey is stored EX: path/to/rootkey
-				ROOTPASSWORD: Password for root role.
-				TARGETPASSWORD: Password for targets role.
-				RELEASEPASSWORD: Password for release role.
-				TIMESTAMPPASSWORD: Password for timestamp role.
-		Run addDelegation.py
-			python addDelegation.py path/to/delconfig.txt
-			This is used to create a new delegated role for your TUF Metadata.
-========================================================================================================================
+```shell
+python generateKeystore.py path/to/keyconfig.txt
+```
 
-**CHANGING TARGET FILE METADATA**
+### Generate a new repository
 
-	In the event that metadata needs to be updated to accomodate a change in the appropriate channel(delegated role), the following instructions should be followed:
+#### 1. Modify the repoconfig.txt file
+
+If you did steps 3/4 above, you will need to modify the repoconfig.txt file according to your setup.  More details can be found on the wiki.  The repoconfig.txt will require you to enter a root key.  Remember to store your Root Private Key(s) OFFLINE.
+
+#### 2. Generate the repository.
+
+```shell
+python generateMetadata.py path/to/repoconfig.txt
+```
+
+### Copy the repository to a "live" folder
+
+#### 1. Modify the copyconfig.txt file
+
+If you did steps 3/4 above, you will need to modify the copyconfig.txt file according to your setup.  More details can be found on the wiki.
+
+#### 2. Copy the repository.
+
+This is used to create a final copy of your metadata and you can then upload to your TUF server.
+
+```shell
+python copyToRepository.py path/to/copyconfig.txt
+```
+
+### Create a delegation
+
+#### 1. Modify the delconfig.txt file
+
+If you did steps 3/4 above, you will need to modify the delconfig.txt file according to your setup.  More details can be found on the wiki.
+
+#### 2. Add a delegation repository.
+
+This is used to create a new delegated role for your TUF Metadata.
+
+```shell
+python addDelegation.py path/to/delconfig.txt
+```
+
+## Modify Existing Repository Inside Delegated Metadata
+
+In the event that metadata needs to be updated to accomodate a change in the appropriate channel(delegated role), the following instructions should be followed:
+
+### 1. Files in the Target File Modification Folder should be in the same directory as the configuration files and other scripts.
 
 	1. All of the files in the Target File Modification Folder should be in the same directory as the configuration files and other scripts.
 	2. Set up the two configuration files:
