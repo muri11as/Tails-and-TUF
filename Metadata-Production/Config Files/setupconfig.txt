@@ -1,0 +1,4 @@
+PATHTODIRECTORY=/Users/Ceeze/Desktop/
+PATHTOTARGETS=/Users/Ceeze/Desktop/targets
+REPO=/Users/Ceeze/Desktop/tuf/targets
+
