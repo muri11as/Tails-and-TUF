@@ -1,55 +1,37 @@
-
-**GENERATING TUF METADATA FOR TAILS**
+**Creating TUF Metadata**
 ========================================================================================================================
-========================================================================================================================
-**INTRODUCTION**
 
 TUF Metadata for Tails has been created with three delegated roles in mind.
+* Stable
+* Beta
+* Nightly
 
-	I. STABLE
-	II. BETA
-	III. NIGHTLY
-
-	The stable channel is currently the only one being implemented in Tails, so our focus is on that.
-	We have still implemented the other two delegated roles in anticipation of future efforts.
-
-
-	The three channels represent different methods to download updates, specifically differing in the amount of time 
-	in between each update. Stable, beta, and nightly is the order of these channels, with stable having the least 
-	frequent updates, and nightly the most.
+The stable channel is currently the only one being implemented in Tails, so we have placed our focus on that channel.
+We have, however, implemented the other two delegated roles in anticipation of these future channels.
 	
-========================================================================================================================	
-**INDEX**
+###1. Download the TUF Repository Tools
 
-	To generate TUF Metadata for the first time for Tails see the Automatically Section.
-	To utilize a specific script by itself, or modify metadata after initial creation, see Manually Section
-	To change Target files and TUF metadata for the specific targets/delegation refer to the
-	Changing Target File Metadata section at the bottom of this page.	
-		
-		I. Automatically.
-		II. Manually.
-		III. Changing Target File Metadata.
-		
-========================================================================================================================
+To create a new repository, you will need to generate all the initial metadata files.  Enter the following shell commands to download the TUF Repository Tools.
 
+```shell
+virtualenv --no-site-packages (Pick a name)
+source (Name you picked)/bin/activate
+pip install --upgrade https://github.com/theupdateframework/tuf/archive/repository-tools.zip
+```
 
-========================================================================================================================
-**AUTOMATICALLY**
-	
-	This section guides you in how to generate TUF metadata for Tails, for the first time:
-	
-	TO RUN ALL SCRIPTS TO CREATE NEW METADATA AUTOMATICALLY
-	**WARNING** ALL CONFIGURATION FILES ARE DESIGNED WITH VARIABLE=YOURINPUT, DO NOT CHANGE FORMAT!!
-		
-	As a prerequesite, you need to install the TUF REPOSITORY TOOLS:
-		To Install, in a shell run the following:				
-			$ virtualenv --no-site-packages (Pick a name)
-			$ source (Name you picked)/bin/activate
-			$ pip install --upgrade https://github.com/theupdateframework/tuf/archive/repository-tools.zip
-	
-	Source: https://docs.google.com/document/d/1n-4G8cfuGMCBwXDgkj52DuBhRG5Di6YW9p8IaH-fIxc/edit?pli=1#
-========================================================================================================================	
-	1. After you clone this repository, navigate to Metadata-Production folder:
+Source: https://docs.google.com/document/d/1n-4G8cfuGMCBwXDgkj52DuBhRG5Di6YW9p8IaH-fIxc/edit?pli=1#
+
+###2. Clone this repository and navigate to the Metadata-Production folder
+
+You may skip this step if you have already cloned this repo.  Otherwise enter the following command in a shell.
+
+```shell
+git clone https://github.com/muri11as/Tails-and-TUF
+```
+
+###3. Copy and paste all files
+
+1. After you clone this repository, navigate to Metadata-Production folder:
 		**After downloading, place all files in the Config Files folder and Target File Modification folder in the same folder as all the other scripts.** (Move them up a directory)
 		HAVE ALL SCRIPTS AND CONFIG.TXT FILES IN THE SAME PLACE
 	2. Open all config.txt files
