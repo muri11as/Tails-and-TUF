@@ -8,6 +8,8 @@ TUF Metadata for Tails has been created with three delegated roles in mind.
 
 The stable channel is currently the only one being implemented in Tails, so we have placed our focus on that channel.
 We have, however, implemented the other two delegated roles in anticipation of these future channels.
+
+## First time Metadata Generation
 	
 ###1. Download the TUF Repository Tools
 
@@ -29,71 +31,34 @@ You may skip this step if you have already cloned this repo.  Otherwise enter th
 git clone https://github.com/muri11as/Tails-and-TUF
 ```
 
-###3. Copy and paste all files
+###3. Edit the configuration files
 
-1. After you clone this repository, navigate to Metadata-Production folder:
-		**After downloading, place all files in the Config Files folder and Target File Modification folder in the same folder as all the other scripts.** (Move them up a directory)
-		HAVE ALL SCRIPTS AND CONFIG.TXT FILES IN THE SAME PLACE
-	2. Open all config.txt files
-		-setupconfig.txt
-		-keyconfig.txt
-		-repoconfig.txt
-		-targetconfig.txt
-	3. Setup all of your config files to your preference
-	4. MAKE SURE ALL FILES IN THIS FOLDER REMAIN IN THE SAME FOLDER:
-		SETUPCONFIG.TXT:
-			PATHTODIRECTORY
-			PATHTOTARGETS
-			REPO	
-			-Change PATHTODIRECTORY: To your current directory where this folder is.
-						Make sure all of the included files are present.
-						**WILL NOT WORK IF THE CONFIG FILES ARE NOT IN THE SAME DIRECTORY AS THE SCRIPTS**
-			-Change PATHTOTARGETS: To the targets folder you want to fill your repository targets folder with.
-						EX: you have your target files in a "model" targets folder elsewhere on your machine.
-						You want this targets folder to contain your target files. 
-						This targets folder will replace the one created by the automated script. 
-			-Change REPO: To your current path/to/repository folder. Example: users/home/tuf/
-				**INCLUDE THE / at the end**
+Inside the Config Files directory, open the following configuration files, and make the changes according to your environment.
 
-	5. Change the remaining fields in the other config.txt files to suit your needs.
-		KEYCONFIG.TXT:
-			ROOTKEYSTORE: Should be the path to where you want to store your RSA rootkey pair.
-			KEYSTORE: Should be the path to where you want to store the other non rootkey pairs.
-			ROOTPASSWORD: Password for your root role.
-			TARGETPASSWORD: Password for your targets role.
-			RELEASEPASSWORD: Password for your release role.
-			TIMESTAMPPASSWORD: Password for your timestamp role.
-			STABLEPASSWORD: Password for Tails specific delegated role "stable".
-			BETAPASSWORD: Password for Tails specific delegated role "beta".
-			NIGHTLYPASSWORD: Password for Tails specific delegated role "nightly".
-		REPOCONFIG.TXT:
-			ROOTKEY: Path to your rootkey.
-			REPONAME: Path to your repository.
-			KEYSTORE: Path to where your non rootkeys are stored, same as in keyconfig.txt.
-			ROOTPASSWORD: Same as in keyconfig.txt. 
-			TARGETPASSWORD: Same as in keyconfig.txt. 
-			RELEASEPASSWORD: Same as in keyconfig.txt. 
-			TIMESTAMPPASSWORD: Same as in keyconfig.txt. 
-			ROOTTHRESH: Threshold for root role.
-			TIMESTAMPTHRESH: Threshold for timestap role.
-			RELEASETHRESH: Threshold for release role.
-			TARGETSTHRESH: Threshold for targets role.
-			TIMESTAMPEXP: Expiration date and time for Timestamp Role in: YYYY-MM-DD HH:MM:SS format.
-		TARGETCONFIG.TXT:
-			REPONAME: Path to your repository, same as in repoconfig.txt.
-			ROOTKEYSTORE: Path to where your rootkey is stored EX: /users/name/Desktop/rootkeys/rootkey
-			KEYSTORE: Path to where your non rootkeys are stored, same as in repoconfig.txt && keyconfig.txt.
-			TARGETSTRUCTURE: Path to your update structure, starting with targets/ EX: targets/update/v1/Tails/0.21/i386/
-			ROOTPASSWORD: same as in repoconfig.txt && keyconfig.txt.
-			TARGETPASSWORD: Same as in repoconfig.txt && keyconfig.txt.
-			RELEASEPASSWORD: Same as in repoconfig.txt && keyconfig.txt.
-			TIMESTAMPPASSWORD: Same as in repoconfig.txt && keyconfig.txt.
-			STABLEPASSWORD: Same as in keyconfig.txt.
-			BETAPASSWORD: Same as in keyconfig.txt.
-			NIGHTLYPASSWORD: Same as in keyconfig.txt
-	6. Run setup.py
-		"python setup.py /path/to/setupconfig.txt"
-========================================================================================================================
+* setupconfig.txt
+* keyconfig.txt
+* repoconfig.txt
+* targetconfig.txt
+
+You may do step 4 first, then move on to this step if you do not want to keep a fresh copy of the configuration files.  The configuration files should be self explanatory, however, more details on each configuration file and its associated variables is available in the wiki.
+
+###4. Copy the configuration files to the Metadata-Production directory
+
+This will copy all the configuration files in the Config Files directory to the Metadata-Production directory (one level up)
+
+```shell
+sh copyfiles.sh
+```
+
+###5. Run the setup
+
+In a terminal run the following command to begin generating the initial metadata for your TUF repository.  The metadata will be generated in the location specified in the setupconfig.txt
+
+```shell
+python setup.py setupconfig.txt
+```
+
+
 **MANUALLY**
 
 INDIVIDUAL SCRIPT INSTRUCTIONS:
