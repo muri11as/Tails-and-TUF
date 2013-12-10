@@ -39,9 +39,6 @@ for line in filey:
 
 filey.close()
 	
-if channel != "stable" or channel != "beta" or channel !="nightly"
-	print "Not a valid channel!"
-	sys.exit(1)
 rmscript = "clearTarg.py "
 addscript = "addToRole.py "
 #GET ALL PATHS 
@@ -54,8 +51,8 @@ goLive = "cp -r "+repo+"metadata.staged "+repo+"metadata"
 
 #RUN
 subprocess.call(rmTarg, shell=True)
-subprocess.call(rm,shell=True)
-subprocess.call(mk,shell=True)
-subprocess.call(fillTargs, shell=True)
-subprocess.call(addTarg, shell=True)
-subprocess.call(goLive,shell=True)
+#subprocess.call(rm,shell=True)
+#subprocess.call(mk,shell=True)
+#subprocess.call(fillTargs, shell=True)
+#subprocess.call(addTarg, shell=True)
+#subprocess.call(goLive,shell=True)
