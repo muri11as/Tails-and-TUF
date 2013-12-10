@@ -9,6 +9,11 @@ TUF Metadata for Tails has been created with three delegated roles in mind.
 The stable channel is currently the only one being implemented in Tails, so we have placed our focus on that channel.
 We have, however, implemented the other two delegated roles in anticipation of these future channels.
 
+This guide will walk you through on how to generate metadata for your repository.  We believe the variables within the configuration files are self-explanatory, but if you wish to learn more about what each script does, and/or reference the variables within the configuration files, please visit our wiki or click on the links below.
+
+* [Script Descriptions](https://github.com/muri11as/Tails-and-TUF/wiki/Generating-Metadata)
+* [Configuration Manual](https://github.com/muri11as/Tails-and-TUF/wiki/Metadata-Configurations)
+
 ## Generating Metadata for the First time	
 ###1. Download the TUF Repository Tools
 
