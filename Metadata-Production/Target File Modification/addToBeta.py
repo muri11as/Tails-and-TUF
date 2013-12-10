@@ -2,7 +2,7 @@
 
 AUTHOR: CESAR MURILLAS
 DESCRIPTION: THIS SCRIPT WILL ADD TARGET FILES TO TARGETS ROLE METADATA
-USAGE: run python addtargs.py path/to/targetsconfig.txt
+USAGE: run python addToBeta.py path/to/swaptargetconfig.txt channel channelpassword
 
 '''
 
