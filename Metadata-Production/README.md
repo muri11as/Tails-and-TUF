@@ -17,7 +17,7 @@ source (Name you picked)/bin/activate
 pip install --upgrade https://github.com/theupdateframework/tuf/archive/repository-tools.zip
 ```
 
-Source: https://docs.google.com/document/d/1n-4G8cfuGMCBwXDgkj52DuBhRG5Di6YW9p8IaH-fIxc/edit?pli=1#
+Source: https://github.com/theupdateframework/tuf/blob/repository-tools/tuf/README.md
 
 ###2. Clone this repository and navigate to the Metadata-Production folder
 
