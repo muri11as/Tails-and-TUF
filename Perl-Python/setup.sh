@@ -7,6 +7,7 @@ clear
 sudo cp ./UpdateDescriptionFile/* /usr/share/perl5/Tails/IUK/UpdateDescriptionFile
 sudo cp ./TargetFile/* /usr/share/perl5/Tails/IUK/TargetFile
 sudo cp Frontend.pm /usr/share/perl5/Tails/IUK/
+sudo cp RunningSystem.pm /usr/share/perl5/Tails/IUK/
 #Do the copy for tuf-metadata
 sudo cp -R tuf-metadata /usr/share/perl5/Tails/IUK/
 sudo cp tuf.interposition_meta.json /usr/share/perl5/Tails/IUK/tuf.interposition_meta.json
